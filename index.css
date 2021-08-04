@@ -184,8 +184,6 @@ nav a {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background-image: url("https://images.unsplash.com/photo-1488866022504-f2584929ca5f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80");
-  background-size: cover; */
   background: black;
   color: white;
   text-align: center;
@@ -933,9 +931,7 @@ select:-webkit-autofill:focus {
 }
 
 .window {
-  /* background: #6fc3eb; */
   background: linear-gradient(to bottom, #6fc3eb 0%, #6fc3eb 50%, #5fb0cd 51%, #5fb0cd 100%);
-  /* background: url("/alex3.png"); */
   width: 30px;
   height: 30px;
   margin: 18px 0 0 50px;
@@ -1571,14 +1567,7 @@ select:-webkit-autofill:focus {
   grid-area: app1;
   border-top-left-radius: 10px;
 }
-/* .app1:hover{
-  background: url(./pictures/hangryPic.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  font-size: 1.1rem;
-  font-weight: 700;
-  text-shadow: 1px 1px 2px black;
-} */
+
 .front{
   position: absolute;
   top: 0;

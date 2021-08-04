@@ -761,11 +761,7 @@ form.addEventListener('submit', (e) => {
     }, 8300)
 })
 
-// fetch('https://formsubmit.co/ajax/alex.chu16@hotmail.com')
-//     .then(response => {
-//         console.log(response);
-//     })
-//     .catch(err => console.log(err));
+
 
 const sendEmail = async (url = '', data) => {
     const response = await fetch(url, {
@@ -775,7 +771,6 @@ const sendEmail = async (url = '', data) => {
         credentials: 'same-origin', // include, *same-origin, omit
         headers: {
             'Content-Type': 'application/json'
-            // 'Content-Type': 'application/x-www-form-urlencoded',
         },
         redirect: 'follow', // manual, *follow, error
         body: JSON.stringify(data),
