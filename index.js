@@ -700,12 +700,15 @@ window.addEventListener('load', () => {
         next1.style.display = "block"
         next1.classList.add("viewing");
         hamburger.style.pointerEvents = "auto";
-        rocket.style.display = "none";
-        rocketFlame.style.animation = "none";
         aboutLink.style.pointerEvents = "auto";
         portfolioLink.style.pointerEvents = "auto";
         contactLink.style.pointerEvents = "auto";
     }, 6000);
+
+    setTimeout(() => {
+        rocket.style.display = "none";
+        rocketFlame.style.animation = "none";
+    }, 10000);
 })
 
 

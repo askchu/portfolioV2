@@ -973,7 +973,7 @@ select:-webkit-autofill:focus {
   0% {
     transform: rotate(130deg) scale(0);
     top: 0%;
-    left: 80%;
+    left: 50%;
   }
   30%{
     transform: rotate(180deg) scale(1.5);
@@ -1041,6 +1041,7 @@ select:-webkit-autofill:focus {
 
 @media (max-width: 770px){
    .rocketCon {
+     left: 50%;
     animation: rocketMoveY 10s forwards;
   }
 
