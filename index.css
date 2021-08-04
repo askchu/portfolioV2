@@ -647,7 +647,7 @@ nav a {
 
 .input-container.focus span::before,
 .input-container.focus span::after {
-    opacity: 1; */
+    opacity: 1;
     animation: openGap 0.2s forwards;
 }
 

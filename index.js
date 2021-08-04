@@ -153,8 +153,6 @@ next1.addEventListener('click', () => {
     next1.style.display = "none";
     next1.classList.remove("viewing");
 
-    console.log(smallStar);
-
     setTimeout(() => {
         details.style.display = "block";
         details.style.animation = "ballToSquare 1.5s forwards";
@@ -801,18 +799,13 @@ aboutLink.addEventListener("click", () => {
         content1.scroll(0, 0);
         planet.classList.remove("viewing");
         planet.classList.add("next");
-        // const topPx = wrap1.getBoundingClientRect().top;
-        // const leftPx = wrap1.getBoundingClientRect().left;
-        // wrap1.style.transition = "2s"
         wrap1.style.opacity = "0";
-        // ball1.style.animation = "paused";
         title.classList.add("fade");
         title.classList.remove("viewing");
         next1.style.display = "none";
         next1.classList.remove("viewing");
         next1.classList.remove("hide");
 
-        // next2.style.display = "block";
 
         setTimeout(() => {
             details.style.display = "block";
@@ -856,7 +849,6 @@ aboutLink.addEventListener("click", () => {
             portfolio.classList.remove("viewing");
             details.classList.remove("hide");
             details.style.animation = "squareToBall 2.3s ease-in-out forwards";
-            // content1.style.display = "none";
         }, 200)
         setTimeout(() => {
             wrap1.style.opacity = "0";
@@ -874,9 +866,6 @@ aboutLink.addEventListener("click", () => {
         setTimeout(() => {
             content1.style.opacity = "1";
         }, 2700)
-        // setTimeout(() => {
-        //     next2.style.display = "block";
-        // }, 5000)
 
 
     }
@@ -953,7 +942,6 @@ aboutLink.addEventListener("click", () => {
             contactForm.classList.remove("viewing");
             details.classList.remove("hide");
             details.style.animation = "squareToBall 2.3s ease-in-out forwards";
-            // content1.style.display = "none";
         }, 200)
         setTimeout(() => {
             wrap1.style.opacity = "0";
@@ -980,23 +968,6 @@ aboutLink.addEventListener("click", () => {
     if (contactForm.classList.contains("viewing") == true) {
         content1.scroll(0, 0);
     }
-    // if (contactForm.classList.contains("hide") == true) {
-    //     content1.scroll(0, 0);
-    //     titleButton.classList.remove('connect');
-    //     titleName.classList.remove("fade");
-    //     titleName.style.opacity = "0";
-    //     buttonContent.classList.remove('connect');
-    //     buttonFlame.classList.remove('takeoff');
-    //     rope.classList.remove('connect');
-
-
-    //     title.classList.remove("fade");
-    //     title.classList.remove("pop");
-    //     titleName.classList.remove("pop");
-
-
-
-    // }
 });
 
 portfolioLink.addEventListener("click", () => {
