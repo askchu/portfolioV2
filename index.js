@@ -101,6 +101,10 @@ const contactMe = document.querySelector(".contactMe");
 
 // Title Button
 titleButton.addEventListener('click', () => {
+    let mobile_view = window.matchMedia("(max-width: 505px)");
+    if (mobile_view.matches) {
+        envelopeBG.style.width = "0";
+    }
 
     details.style.border = "3px solid #F4B400"
     planet.classList.remove("viewing");
@@ -113,7 +117,13 @@ titleButton.addEventListener('click', () => {
     next1.style.display = "none";
     next1.classList.remove("viewing");
     next1.classList.remove("hide");
-    contactForm.style.transform = "scale(1.1)";
+
+    if (mobile_view.matches) {
+        contactForm.style.transform = "scale(0.9)";
+    } else {
+        contactForm.style.transform = "scale(1.1)";
+    }
+
 
     aboutLink.style.pointerEvents = "none";
     portfolioLink.style.pointerEvents = "none";
@@ -220,6 +230,11 @@ next2.addEventListener('click', () => {
 })
 
 next3.addEventListener('click', () => {
+    let mobile_view = window.matchMedia("(max-width: 505px)");
+    if (mobile_view.matches) {
+        envelopeBG.style.width = "0";
+    }
+
     details.style.border = "3px solid #397BF9"
     hamburger.style.pointerEvents = "none";
     portfolio.classList.remove("advWitChu");
@@ -244,7 +259,12 @@ next3.addEventListener('click', () => {
         details.style.border = "3px solid #F4B400"
         details.style.animation = "ballToSquare 1.5s 0.5s forwards";
         contactMe.style.display = "block";
-        contactForm.style.transform = "scale(1.1)";
+
+        if (mobile_view.matches) {
+            contactForm.style.transform = "scale(0.9)";
+        } else {
+            contactForm.style.transform = "scale(1.1)";
+        }
         contactForm.style.opacity = "0";
         contactForm.style.display = "block";
     }, 1000)
@@ -485,6 +505,11 @@ projectsMenu4.addEventListener("click", () => {
     portfolio.classList.remove("fresh");
 })
 nextProject4.addEventListener('click', () => {
+    let mobile_view = window.matchMedia("(max-width: 505px)");
+    if (mobile_view.matches) {
+        envelopeBG.style.width = "0";
+    }
+
     details.style.border = "3px solid #397BF9"
     next3.classList.remove("viewing");
 
@@ -519,7 +544,12 @@ nextProject4.addEventListener('click', () => {
         details.style.border = "3px solid #F4B400"
         details.style.animation = "ballToSquare 1.5s 0.5s forwards";
         contactMe.style.display = "block";
-        contactForm.style.transform = "scale(1.1)";
+        if (mobile_view.matches) {
+            contactForm.style.transform = "scale(0.9)";
+        } else {
+            contactForm.style.transform = "scale(1.1)";
+        }
+
     }, 1000)
     setTimeout(() => {
         // details.style.border = "3px solid #397BF9"
@@ -577,6 +607,8 @@ form.addEventListener('submit', (e) => {
     contactForm.classList.remove("open");
     details.classList.remove("viewing");
     details.style.display = "none";
+
+
     setTimeout(() => {
         wrap3.style.opacity = "1";
     }, 1000);
@@ -616,6 +648,10 @@ form.addEventListener('submit', (e) => {
         buttonContent.classList.remove('connect');
         buttonFlame.classList.remove('takeoff');
         rope.classList.remove('connect');
+        if (mobile_view.matches) {
+            envelopeBG.style.width = "450px";
+            // envelopeBG.style.width = "0";
+        }
 
     }, 4000)
     setTimeout(() => {
@@ -1192,7 +1228,15 @@ portfolioLink.addEventListener("click", () => {
     }
 });
 
+const envelopeBG = document.querySelector(".bg");
+
 contactLink.addEventListener("click", () => {
+    let mobile_view = window.matchMedia("(max-width: 505px)");
+
+    if (mobile_view.matches) {
+        envelopeBG.style.width = "0";
+    }
+
     if (planet.classList.contains("next") == true) {
         hamburger.classList.toggle('open');
         links.classList.toggle('open');
@@ -1216,7 +1260,11 @@ contactLink.addEventListener("click", () => {
         portfolioLink.style.pointerEvents = "none";
         contactLink.style.pointerEvents = "none";
 
-        contactForm.style.transform = "scale(1.1)";
+        if (mobile_view.matches) {
+            contactForm.style.transform = "scale(0.9)";
+        } else {
+            contactForm.style.transform = "scale(1.1)";
+        }
 
         setTimeout(() => {
             details.style.display = "block";
@@ -1252,7 +1300,11 @@ contactLink.addEventListener("click", () => {
         next2.classList.remove("hide");
 
         content1.style.opacity = "0";
-        contactForm.style.transform = "scale(1.1)";
+        if (mobile_view.matches) {
+            contactForm.style.transform = "scale(0.9)";
+        } else {
+            contactForm.style.transform = "scale(1.1)";
+        }
 
         hamburger.style.pointerEvents = "none";
         aboutLink.style.pointerEvents = "none";
@@ -1300,7 +1352,14 @@ contactLink.addEventListener("click", () => {
     if (portfolio.classList.contains("viewing") == true) {
         portfolio.style.display = "none";
         portfolio.style.opacity = "0";
-        contactForm.style.transform = "scale(1.1)";
+
+
+        if (mobile_view.matches) {
+            contactForm.style.transform = "scale(0.9)";
+        } else {
+            contactForm.style.transform = "scale(1.1)";
+        }
+
         next3.style.display = "none";
         next3.classList.remove("viewing");
 

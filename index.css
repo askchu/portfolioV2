@@ -380,7 +380,7 @@ nav a {
   opacity: 0;
   position: absolute;
   background: grey;
-  width: 450px;
+  /* width: 450px; */
   height: 500px;
   left: -6.5%;
   top: -6%;
@@ -1392,7 +1392,7 @@ select:-webkit-autofill:focus {
   position: relative;
   height: 100%;
   width: 100%;
-  text-align: justify;
+  text-align: left;
   padding: 40px 40px 50px 40px;
   overflow: auto;
   scroll-behavior: smooth;
@@ -1702,7 +1702,7 @@ select:-webkit-autofill:focus {
     display: flex;
   }
   .links{
-    display: block;
+    display: none;
     position: absolute;
     top: 110px;
     left: 25%;
@@ -1712,6 +1712,7 @@ select:-webkit-autofill:focus {
     background: transparent;
     transition: 0.2s;
     z-index: -100;
+    pointer-events: none;
     opacity: 0;
   }
   .links ul{
@@ -1740,9 +1741,11 @@ select:-webkit-autofill:focus {
     }
   }
   .links.open{
+    display: block;
     left: 25%;
     z-index: 7500;
     opacity: 1;
+    pointer-events: auto;
   }
   .link.open{
     animation: slideIn 1s forwards
