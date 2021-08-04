@@ -112,11 +112,10 @@ titleButton.addEventListener('click', () => {
     next1.classList.remove("viewing");
     next1.classList.remove("hide");
 
-    contactForm.style.transform = "scale(1.2)";
+    contactForm.style.transform = "scale(1.1)";
 
     setTimeout(() => {
         details.style.display = "block";
-        details.style.border = "3px solid #F4B400"
         details.style.animation = "ballToSquare 1.5s forwards";
         contactMe.style.display = "block";
     }, 950)
@@ -143,6 +142,7 @@ titleButton.addEventListener('click', () => {
 
 
 next1.addEventListener('click', () => {
+    details.style.border = "3px solid #E3746B";
     planet.classList.remove("viewing");
     planet.classList.add("next");
     hamburger.style.pointerEvents = "none";
@@ -151,19 +151,19 @@ next1.addEventListener('click', () => {
     title.classList.remove("viewing");
     next1.style.display = "none";
     next1.classList.remove("viewing");
+    details.classList.add("viewing");
 
     setTimeout(() => {
 
         details.style.display = "block";
         details.style.animation = "ballToSquare 1.5s forwards";
         content1.style.display = "block";
+        if (details.classList.contains("viewing") == true) {
+            content1.scroll(0, 0);
+        }
     }, 950)
 
     setTimeout(() => {
-        for (let star of allStars) {
-            star.style.animation = "paused";
-        }
-        details.classList.add("viewing");
         content1.classList.add("viewing");
         content1.style.opacity = "1";
         hamburger.style.pointerEvents = "auto";
@@ -204,7 +204,6 @@ next2.addEventListener('click', () => {
 
     setTimeout(() => {
         portfolio.style.opacity = "1";
-        // next3.style.display = "block";
         next3.style.display = "block";
         next3.classList.add("viewing");
         hamburger.style.pointerEvents = "auto";
@@ -237,12 +236,11 @@ next3.addEventListener('click', () => {
         details.style.border = "3px solid #F4B400"
         details.style.animation = "ballToSquare 1.5s 0.5s forwards";
         contactMe.style.display = "block";
-        contactForm.style.transform = "scale(1.2)";
+        contactForm.style.transform = "scale(1.1)";
         contactForm.style.opacity = "0";
         contactForm.style.display = "block";
     }, 1000)
     setTimeout(() => {
-        // details.style.border = "3px solid #397BF9"
         next3.classList.remove("viewing");
         details.classList.add("viewing");
         contactForm.classList.add("viewing");
@@ -254,7 +252,6 @@ next3.addEventListener('click', () => {
 
     setTimeout(() => {
         contactForm.classList.add("open");
-        // contactForm.style.zIndex = "7000";
         contactForm.style.opacity = "1";
         hamburger.style.pointerEvents = "auto";
     }, 2700)
@@ -481,6 +478,8 @@ projectsMenu4.addEventListener("click", () => {
 })
 nextProject4.addEventListener('click', () => {
     details.style.border = "3px solid #397BF9"
+    next3.classList.remove("viewing");
+
     portfolio.classList.remove("fresh");
     freshCuts.style.display = "none";
 
@@ -512,7 +511,7 @@ nextProject4.addEventListener('click', () => {
         details.style.border = "3px solid #F4B400"
         details.style.animation = "ballToSquare 1.5s 0.5s forwards";
         contactMe.style.display = "block";
-        contactForm.style.transform = "scale(1.2)";
+        contactForm.style.transform = "scale(1.1)";
     }, 1000)
     setTimeout(() => {
         // details.style.border = "3px solid #397BF9"
@@ -566,6 +565,7 @@ const sticker = document.querySelector('.sticker')
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
+    hamburger.style.pointerEvents = "none";
     contactForm.classList.remove("open");
     details.classList.remove("viewing");
     details.style.display = "none";
@@ -612,6 +612,7 @@ form.addEventListener('submit', (e) => {
     }, 4000)
     setTimeout(() => {
         title.classList.remove("fade");
+        title.classList.remove("close");
         title.classList.remove("pop");
         titleName.classList.remove("pop");
         // titleName.classList.add('pop');
@@ -634,11 +635,14 @@ form.addEventListener('submit', (e) => {
         formFG.style.display = "none";
         sticker.style.display = "none";
         formBG.style.animation = "none";
+        details.style.border = "#E3746B";
     }, 7500)
 
     setTimeout(() => {
         next1.style.display = "block";
         next1.classList.add("viewing");
+        planet.classList.add("viewing");
+        hamburger.style.pointerEvents = "auto";
     }, 8300)
 })
 
@@ -1134,7 +1138,7 @@ contactLink.addEventListener("click", () => {
         next1.classList.remove("viewing");
         next1.classList.remove("hide");
 
-        contactForm.style.transform = "scale(1.2)";
+        contactForm.style.transform = "scale(1.1)";
 
         setTimeout(() => {
             details.style.display = "block";
@@ -1167,14 +1171,13 @@ contactLink.addEventListener("click", () => {
         next2.classList.remove("hide");
 
         content1.style.opacity = "0";
-        contactForm.style.transform = "scale(1.2)";
+        contactForm.style.transform = "scale(1.1)";
 
         setTimeout(() => {
             details.classList.remove("viewing");
             content1.classList.remove("viewing");
             details.classList.remove("hide");
             details.style.animation = "squareToBall 2.3s ease-in-out forwards";
-            // content1.style.display = "none";
         }, 200)
         setTimeout(() => {
             wrap1.style.opacity = "1";
@@ -1207,7 +1210,7 @@ contactLink.addEventListener("click", () => {
     if (portfolio.classList.contains("viewing") == true) {
         portfolio.style.display = "none";
         portfolio.style.opacity = "0";
-        contactForm.style.transform = "scale(1.2)";
+        contactForm.style.transform = "scale(1.1)";
         next3.style.display = "none";
         next3.classList.remove("viewing");
         next3.classList.remove("hide");
@@ -1217,13 +1220,13 @@ contactLink.addEventListener("click", () => {
             portfolio.classList.remove("viewing");
             details.classList.remove("hide");
             details.style.animation = "squareToBall 2.3s ease-in-out forwards";
-            // content1.style.display = "none";
         }, 200)
         setTimeout(() => {
             wrap2.style.opacity = "1";
             wrap3.style.opacity = "0";
             details.style.border = "3px solid  #F4B400"
             details.style.animation = "ballToSquare 1.5s 0.5s forwards";
+
             contactMe.style.display = "block";
             contactForm.style.display = "block";
             contactForm.style.opacity = "0";
@@ -1238,7 +1241,6 @@ contactLink.addEventListener("click", () => {
             contactForm.style.boxShadow = "none";
             contactForm.style.pointerEvents = "auto";
             contactForm.classList.add("open");
-            // contactForm.style.zIndex = "7000";
             next1.style.display = "none";
             next1.classList.remove("viewing");
             next1.classList.remove("hide");
@@ -1254,8 +1256,7 @@ contactLink.addEventListener("click", () => {
         details.classList.toggle("hide");
         contactForm.classList.toggle("open");
     }
-    // if (contactForm.classList.contains("hide") == true) {
-    // }
+
 });
 
 
@@ -1273,6 +1274,5 @@ content1.addEventListener("scroll", () => {
     }
 
 })
-
 
 

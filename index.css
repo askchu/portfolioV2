@@ -358,7 +358,7 @@ nav a {
   pointer-events: none;
   position: absolute;
   color: white;
-  top: 25%;
+  top: 23%;
   transform: translateX(0) scale(0.3);
   width: 90%;
   max-width: 400px;
@@ -513,7 +513,7 @@ nav a {
   width: 100%;
   height: 100%;
   border-radius: 10px;
-  padding: 1.5rem 2.2rem;
+  padding: 1rem 2.2rem;
   overflow: hidden;
   position: relative;
   font-weight: 700;
@@ -569,7 +569,6 @@ nav a {
 .form-title {
     color: white;
     font-weight: 500;
-    font-size: 1.5rem;
     line-height: 1;
     margin: 10px 0 20px 0;
 }
@@ -1061,11 +1060,14 @@ select:-webkit-autofill:focus {
     display: block;
     position: absolute;
     top: 110px;
-    left: 100%;
-    width: 100%;
-    height: 100vh;
+    left: 25%;
+    width: 50%;
+    margin: 0 auto;
+    height: 100%;
     background: transparent;
-    transition: 0.5s;
+    transition: 0.2s;
+    z-index: -100;
+    opacity: 0;
   }
   .links ul{
     width: 100%;
@@ -1090,11 +1092,12 @@ select:-webkit-autofill:focus {
     100%{
       display: block;
       transform: translateX(0);
-      left: 0;
     }
   }
   .links.open{
-    left: 0;
+    left: 25%;
+    z-index: 7500;
+    opacity: 1;
   }
   .link.open{
     animation: slideIn 1s forwards
@@ -1752,4 +1755,3 @@ select:-webkit-autofill:focus {
   scroll-behavior: smooth;
   transition: 0.5s;
 }
-
