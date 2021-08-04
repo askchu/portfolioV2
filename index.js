@@ -831,6 +831,7 @@ aboutLink.addEventListener("click", () => {
         next1.classList.remove("viewing");
         next1.classList.remove("hide");
 
+        hamburger.style.pointerEvents = "none";
         aboutLink.style.pointerEvents = "none";
         portfolioLink.style.pointerEvents = "none";
         contactLink.style.pointerEvents = "none";
@@ -847,6 +848,7 @@ aboutLink.addEventListener("click", () => {
             content1.classList.add("viewing");
             content1.style.opacity = "1";
 
+            hamburger.style.pointerEvents = "auto";
             aboutLink.style.pointerEvents = "auto";
             portfolioLink.style.pointerEvents = "auto";
             contactLink.style.pointerEvents = "auto";
@@ -875,6 +877,7 @@ aboutLink.addEventListener("click", () => {
         next3.classList.remove("viewing");
         next3.classList.remove("hide");
 
+        hamburger.style.pointerEvents = "none";
         aboutLink.style.pointerEvents = "none";
         portfolioLink.style.pointerEvents = "none";
         contactLink.style.pointerEvents = "none";
@@ -901,6 +904,7 @@ aboutLink.addEventListener("click", () => {
         setTimeout(() => {
             content1.style.opacity = "1";
 
+            hamburger.style.pointerEvents = "auto";
             aboutLink.style.pointerEvents = "auto";
             portfolioLink.style.pointerEvents = "auto";
             contactLink.style.pointerEvents = "auto";
@@ -973,6 +977,7 @@ aboutLink.addEventListener("click", () => {
         contactForm.style.display = "none";
         contactMe.style.opacity = "0";
 
+        hamburger.style.pointerEvents = "none";
         aboutLink.style.pointerEvents = "none";
         portfolioLink.style.pointerEvents = "none";
         contactLink.style.pointerEvents = "none";
@@ -1001,7 +1006,8 @@ aboutLink.addEventListener("click", () => {
         }, 2300)
 
         setTimeout(() => {
-            content1.style.opacity = "1";
+
+            hamburger.style.pointerEvents = "auto"; content1.style.opacity = "1";
             aboutLink.style.pointerEvents = "auto";
             portfolioLink.style.pointerEvents = "auto";
             contactLink.style.pointerEvents = "auto";
@@ -1038,6 +1044,7 @@ portfolioLink.addEventListener("click", () => {
 
         next3.classList.remove("hide");
 
+        hamburger.style.pointerEvents = "none";
         aboutLink.style.pointerEvents = "none";
         portfolioLink.style.pointerEvents = "none";
         contactLink.style.pointerEvents = "none";
@@ -1057,6 +1064,7 @@ portfolioLink.addEventListener("click", () => {
             next3.style.display = "block";
             next3.classList.add("viewing");
 
+            hamburger.style.pointerEvents = "auto";
             aboutLink.style.pointerEvents = "auto";
             portfolioLink.style.pointerEvents = "auto";
             contactLink.style.pointerEvents = "auto";
@@ -1075,6 +1083,7 @@ portfolioLink.addEventListener("click", () => {
         next2.classList.remove("viewing");
         next2.classList.remove("hide");
 
+        hamburger.style.pointerEvents = "none";
         aboutLink.style.pointerEvents = "none";
         portfolioLink.style.pointerEvents = "none";
         contactLink.style.pointerEvents = "none";
@@ -1103,7 +1112,8 @@ portfolioLink.addEventListener("click", () => {
         setTimeout(() => {
             portfolio.style.opacity = "1";
             next3.style.display = "block";
-            next3.classList.add("viewing");
+
+            hamburger.style.pointerEvents = "auto"; next3.classList.add("viewing");
             aboutLink.style.pointerEvents = "auto";
             portfolioLink.style.pointerEvents = "auto";
             contactLink.style.pointerEvents = "auto";
@@ -1128,6 +1138,7 @@ portfolioLink.addEventListener("click", () => {
         next2.classList.remove("viewing");
         next2.classList.remove("hide");
 
+        hamburger.style.pointerEvents = "none";
         aboutLink.style.pointerEvents = "none";
         portfolioLink.style.pointerEvents = "none";
         contactLink.style.pointerEvents = "none";
@@ -1142,7 +1153,6 @@ portfolioLink.addEventListener("click", () => {
             contactForm.style.display = "none";
             details.classList.remove("hide");
             details.style.animation = "squareToBall 2.3s ease-in-out forwards";
-            // content1.style.display = "none";
         }, 200)
         setTimeout(() => {
             next3.classList.remove("hide");
@@ -1164,7 +1174,8 @@ portfolioLink.addEventListener("click", () => {
         setTimeout(() => {
             portfolio.style.opacity = "1";
             next3.style.display = "block";
-            next3.classList.add("viewing");
+
+            hamburger.style.pointerEvents = "auto"; next3.classList.add("viewing");
             aboutLink.style.pointerEvents = "auto";
             portfolioLink.style.pointerEvents = "auto";
             contactLink.style.pointerEvents = "auto";
@@ -1199,6 +1210,7 @@ contactLink.addEventListener("click", () => {
         next1.classList.remove("viewing");
         next1.classList.remove("hide");
 
+        hamburger.style.pointerEvents = "none";
         aboutLink.style.pointerEvents = "none";
         portfolioLink.style.pointerEvents = "none";
         contactLink.style.pointerEvents = "none";
@@ -1224,7 +1236,8 @@ contactLink.addEventListener("click", () => {
             contactForm.style.opacity = "1";
         }, 2300)
         setTimeout(() => {
-            contactForm.classList.add("open");
+
+            hamburger.style.pointerEvents = "auto"; contactForm.classList.add("open");
             aboutLink.style.pointerEvents = "auto";
             portfolioLink.style.pointerEvents = "auto";
             contactLink.style.pointerEvents = "auto";
@@ -1240,6 +1253,7 @@ contactLink.addEventListener("click", () => {
         content1.style.opacity = "0";
         contactForm.style.transform = "scale(1.1)";
 
+        hamburger.style.pointerEvents = "none";
         aboutLink.style.pointerEvents = "none";
         portfolioLink.style.pointerEvents = "none";
         contactLink.style.pointerEvents = "none";
@@ -1272,7 +1286,8 @@ contactLink.addEventListener("click", () => {
 
         }, 2300)
 
-        setTimeout(() => {
+        setT
+        hamburger.style.pointerEvents = "auto"; imeout(() => {
             aboutLink.style.pointerEvents = "auto";
             portfolioLink.style.pointerEvents = "auto";
             contactLink.style.pointerEvents = "auto";
@@ -1287,7 +1302,8 @@ contactLink.addEventListener("click", () => {
         contactForm.style.transform = "scale(1.1)";
         next3.style.display = "none";
         next3.classList.remove("viewing");
-        next3.classList.remove("hide");
+
+        hamburger.style.pointerEvents = "none"; next3.classList.remove("hide");
         aboutLink.style.pointerEvents = "none";
         portfolioLink.style.pointerEvents = "none";
         contactLink.style.pointerEvents = "none";
@@ -1325,7 +1341,8 @@ contactLink.addEventListener("click", () => {
         }, 2300)
 
         setTimeout(() => {
-            contactForm.style.opacity = "1";
+
+            hamburger.style.pointerEvents = "auto"; contactForm.style.opacity = "1";
             aboutLink.style.pointerEvents = "auto";
             portfolioLink.style.pointerEvents = "auto";
             contactLink.style.pointerEvents = "auto";
