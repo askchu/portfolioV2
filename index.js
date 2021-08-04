@@ -39,22 +39,6 @@ const aboutLink = document.querySelector(".aboutLink");
 const portfolioLink = document.querySelector(".portfolioLink");
 const contactLink = document.querySelector(".contactLink");
 
-
-
-
-
-// window.onload(() => {
-//     title.classList.add('pop')
-// })
-
-// const topPx = titleName.getBoundingClientRect().top;
-// console.log(top);
-
-
-
-
-
-
 const buttonFlame = document.querySelector(".flame1");
 const buttonContent = document.querySelector('.fill');
 const rope = document.querySelector('.rope');
@@ -62,9 +46,6 @@ const string = document.querySelector('.string');
 
 let mobile_view = window.matchMedia("(max-width: 770px)");
 let desktop_view = window.matchMedia("(min-width: 1440px)");
-
-
-
 
 
 // Stars
@@ -119,48 +100,43 @@ const contactMe = document.querySelector(".contactMe");
 
 // Title Button
 titleButton.addEventListener('click', () => {
-    next1.style.display = "none";
-    titleButton.style.opacity = "1";
-    title.classList.remove("viewing");
+
+    planet.classList.remove("viewing");
     planet.classList.add("next");
-    contactForm.classList.add("viewing");
-    titleButton.style.animationDelay = "0s";
-    titleButton.classList.add('connect');
-    buttonContent.classList.add('connect');
-    buttonFlame.classList.add('takeoff');
-    // setTimeout(() => {
-    //     titleButton.classList.remove("connect")
-    //     buttonFlame.classList.remove("takeoff")
-    //     buttonContent.classList.remove('connect');
-    // }, 5000)
-    // console.log(titleButton.getBoundingClientRect().top);
-    // console.log(titleButton.getBoundingClientRect().right);
-    const right = titleButton.getBoundingClientRect().right;
-    const rightOfRope = right + 160;
-    rope.style.display = "block";
-    string.style.width = `${right}%`;
-    // rope.style.animation = "connectToContactForm 2s ease-in-out forwards";
-    rope.classList.add('connect');
-    contactForm.style.background = "black";
-    contactForm.style.border = "1px solid #eee";
-    contactForm.style.boxShadow = "0 8px 32px 0 rgba(31, 38, 135, 0.45)";
-    contactForm.style.transform = `translateX(${rightOfRope}px`;
-    contactForm.style.opacity = "1";
+    hamburger.style.pointerEvents = "none";
+    wrap3.style.opacity = "0";
 
-    if (mobile_view.matches) {
-        contactForm.style.animation = "stayPut 2s linear 2s forwards"
-    }
-    else if (desktop_view.matches) {
-        contactForm.style.animation = "stayPut 3s linear 2s forwards"
-    }
-    else {
-        contactForm.style.animation = "stayPut 2.5s linear 2s forwards"
-    }
+    title.classList.add("fade");
+    title.classList.remove("viewing");
+    next1.style.display = "none";
+    next1.classList.remove("viewing");
+    next1.classList.remove("hide");
 
-    titleName.style.opacity = "1";
-    titleName.style.animationDelay = "2s";
-    titleName.classList.add("fade");
-    // titleName.style.animation = "fadeOut 1s 1s forwards";
+    contactForm.style.transform = "scale(1.2)";
+
+    setTimeout(() => {
+        details.style.display = "block";
+        details.style.border = "3px solid #F4B400"
+        details.style.animation = "ballToSquare 1.5s forwards";
+        contactMe.style.display = "block";
+    }, 950)
+
+    setTimeout(() => {
+        details.classList.add("viewing");
+        contactMe.classList.add("viewing");
+        contactMe.style.opacity = "1";
+        contactForm.classList.add("viewing");
+        contactForm.style.border = "none";
+        contactForm.style.backgroundColor = "transparent";
+        contactForm.style.boxShadow = "none";
+        contactForm.style.pointerEvents = "auto";
+        contactForm.style.opacity = "1";
+    }, 2300)
+    setTimeout(() => {
+        contactForm.classList.add("open");
+        hamburger.style.pointerEvents = "auto";
+    }, 2700)
+
 
 })
 
@@ -168,21 +144,16 @@ titleButton.addEventListener('click', () => {
 
 
 next1.addEventListener('click', () => {
-    console.log('next');
     planet.classList.remove("viewing");
     planet.classList.add("next");
-    // const topPx = wrap1.getBoundingClientRect().top;
-    // const leftPx = wrap1.getBoundingClientRect().left;
-    // console.log(wrap1.getBoundingClientRect().top)
-    // console.log(wrap1.getBoundingClientRect().left)
-    // wrap1.style.transition = "2s"
+    hamburger.style.pointerEvents = "none";
     wrap1.style.opacity = "0";
-    // ball1.style.animation = "paused";
     title.classList.add("fade");
     title.classList.remove("viewing");
     next1.style.display = "none";
     next1.classList.remove("viewing");
 
+    console.log(smallStar);
 
     setTimeout(() => {
         details.style.display = "block";
@@ -195,32 +166,16 @@ next1.addEventListener('click', () => {
         details.classList.add("viewing");
         content1.classList.add("viewing");
         content1.style.opacity = "1";
+        hamburger.style.pointerEvents = "auto";
     }, 2300)
 
 
-    // setTimeout(() => {
-    //     next2.style.display = "block";
-    // }, 3000)
-
-
-    // setTimeout(() => {
-    //     content1.style.display = "block"
-    //     wrap1.style.animation = "showSection 2.5s forwards"
-    //     ball1.style.animation = "ballToSquare 2.5s forwards"
-    // }, 1500);
-    // setTimeout(() => {
-    //     content1.style.opacity = "1"
-    //     content1.classList.add("viewing");
-    // }, 3500);
 })
 
 
 next2.addEventListener('click', () => {
-    // wrap1.style.animation = "rotateDiagonally 2000ms infinite ease-in-out alternate, zindex 4000ms infinite ease-in-out";
-    // ball1.style.animation = "scale 2000ms infinite ease-in-out alternate";
-    // content1.classList.remove("viewing");
-    // content1.style.display = "none";
-    // wrap1.style.left = "0"
+    hamburger.style.pointerEvents = "none";
+
     content1.style.display = "none";
     content1.style.opacity = "0";
     next2.style.display = "none";
@@ -231,7 +186,6 @@ next2.addEventListener('click', () => {
         details.classList.remove("viewing");
         next2.classList.remove("viewing");
         details.style.animation = "squareToBall 2.3s ease-in-out forwards";
-        // content1.style.display = "none";
     }, 200)
     setTimeout(() => {
         wrap1.style.opacity = "1";
@@ -252,25 +206,17 @@ next2.addEventListener('click', () => {
         // next3.style.display = "block";
         next3.style.display = "block";
         next3.classList.add("viewing");
+        hamburger.style.pointerEvents = "auto";
     }, 2700)
 
 })
 
 next3.addEventListener('click', () => {
     details.style.border = "3px solid #397BF9"
+    hamburger.style.pointerEvents = "none";
     portfolio.classList.remove("advWitChu");
     portfolio.classList.remove("disney");
     portfolio.classList.remove("fresh");
-
-    // adventuresWithChu.style.display = "none";
-    // disneyPlus.style.display = "none";
-    // freshCuts.style.display = "none";
-    // projectsMenu2.style.display = "none";
-    // projectsMenu3.style.display = "none";
-    // projectsMenu4.style.display = "none";
-    // nextProject2.style.display = "none";
-    // nextProject3.style.display = "none";
-    // nextProject4.style.display = "none";
 
 
 
@@ -309,6 +255,7 @@ next3.addEventListener('click', () => {
         contactForm.classList.add("open");
         // contactForm.style.zIndex = "7000";
         contactForm.style.opacity = "1";
+        hamburger.style.pointerEvents = "auto";
     }, 2700)
 
     next1.style.display = "none";
@@ -316,13 +263,6 @@ next3.addEventListener('click', () => {
     next3.style.display = "none";
 })
 
-// next4.addEventListener('click', () => {
-//     wrap3.style.opacity = "1";
-//     mainBall.style.transition = "1s";
-//     mainBall.style.opacity = "0";
-//     next3.style.display = "none";
-//     next4.style.display = "block";
-// })
 
 
 
@@ -597,61 +537,8 @@ nextProject4.addEventListener('click', () => {
 })
 
 
-
-
-
-// title.classList.toggle('close')
-// title.classList.add('close')
-
-
-
-// wrap2.style.opacity = "0";
-// wrap3.style.opacity = "0";
-// setTimeout(() => {
-//     wrap2.style.animation = "rotateSideWays 2000ms infinite ease-in-out alternate-reverse, zindex 4000ms infinite ease-in-out";
-//     wrap2.style.animationDelay = "-1000ms";
-//     wrap3.style.animation = "rotateSideWays 2000ms infinite ease-in-out alternate-reverse, zindex 4000ms infinite ease-in-out";
-//     wrap3.style.animationDelay = "-2500ms";
-
-// }, 1500)
-
-// ball2.style.animation = "paused";
-// wrap2.style.animation = "paused";
-// ball3.style.animation = "paused";
-// wrap3.style.animation = "paused";
-// wrap1.style.left = "15%";
-// wrap2.style.left = "10%";
-// wrap2.style.top = "-100px";
-// wrap3.style.left = "70%";
-// wrap3.style.top = "-100px";
-
-
-// console.log(ball1);
-// console.log(ball2);
-// console.log(ball3);
-
-// ball1.addEventListener('mouseenter', () => {
-//     console.log('i am a ball')
-//     ball1.style.animationPlayState = "paused";
-//     ball2.style.animationPlayState = "paused";
-//     ball3.style.animationPlayState = "paused";
-//     wrap1.style.animationPlayState = "paused";
-//     wrap2.style.animationPlayState = "paused";
-//     wrap3.style.animationPlayState = "paused";
-// })
-// ball1.addEventListener('mouseleave', () => {
-//     ball1.style.animationPlayState = "running";
-//     ball2.style.animationPlayState = "running";
-//     ball3.style.animationPlayState = "running";
-//     wrap1.style.animationPlayState = "running";
-//     wrap2.style.animationPlayState = "running";
-//     wrap3.style.animationPlayState = "running";
-// })
-
-
 // Contact input message effect
 const inputs = document.querySelectorAll(".input")
-// console.log(inputs);
 
 function focusFunc() {
     let parent = this.parentNode;
@@ -696,16 +583,11 @@ form.addEventListener('submit', (e) => {
     title.classList.remove('pop')
     titleButton.style.opacity = "0";
     titleButton.classList.remove("pop");
-    // console.log(form);
-    // console.log(form.name.value);
-    // console.log(form.email.value);
-    // console.log(form.message.value);
     const data = {
         name: form.name.value,
         email: form.email.value,
         message: form.message.value
     }
-    // const result = JSON.stringify(data);
 
     planet.classList.remove("next");
     planet.style.top = "5%";
@@ -714,8 +596,6 @@ form.addEventListener('submit', (e) => {
 
 
     sendEmail('https://formsubmit.co/ajax/alex.chu16@hotmail.com', data)
-    // .then(res => console.log(res))
-    // .catch(err => console.log(err));
 
 
 
@@ -779,7 +659,6 @@ const sendEmail = async (url = '', data) => {
     return response.json();
 }
 
-// console.log(titleName.getBoundingClientRect().top);
 
 const downloadResume = document.querySelector(".download");
 
@@ -795,9 +674,11 @@ downloadResume.addEventListener('click', () => {
     }, 1500)
 })
 
-
+const rocket = document.querySelector(".rocketCon");
+const rocketFlame = document.querySelector(".flame");
 
 window.addEventListener('load', () => {
+    hamburger.style.pointerEvents = "none"
     title.classList.add('pop')
     title.classList.add('viewing');
     titleButton.classList.add("pop");
@@ -808,6 +689,9 @@ window.addEventListener('load', () => {
     setTimeout(() => {
         next1.style.display = "block"
         next1.classList.add("viewing");
+        hamburger.style.pointerEvents = "auto";
+        rocket.style.display = "none";
+        rocketFlame.style.animation = "none";
     }, 6000);
 })
 
@@ -823,25 +707,16 @@ hamburger.addEventListener('click',
             link[i].classList.toggle('open');
             link[i].style.animationDelay = `0.${i}s`
         }
-        // contactForm.classList.toggle('close')
-        // contactForm.style.animationDelay = "0.2s"
+
 
         planet.style.animationDelay = "0s";
-        // console.log(titleName.classList.contains('fade'));
-        // if (titleName.classList.contains('fade') == true) {
-        //     titleName.classList.remove('fade');
-        //     title.style.zIndex = "900";
-        // }
-        console.log(contactForm.classList.contains("hide"));
+
 
 
         if (planet.classList.contains("viewing") == true) {
             planet.classList.toggle("next");
         }
-        // else if (planet.classList.contains("next") == true) {
-        //     planet.classList.remove("next");
-        //     planet.classList.add("viewing");
-        // }
+
 
 
         if (title.classList.contains("viewing") == true) {
@@ -851,25 +726,16 @@ hamburger.addEventListener('click',
             title.style.animationDelay = "0s";
 
         }
-        // if (planet.classList.contains("viewing") == true) {
-        //     planet.classList.toggle("next");
-        // }
+
         if (details.classList.contains("viewing") == true) {
             details.classList.toggle("hide");
         }
-        // if (details.classList.contains("hide") == true) {
-        //     details.classList.remove("hide");
-        // }
+
         if (contactForm.classList.contains("viewing") == true) {
             contactForm.classList.toggle("hide");
             contactForm.classList.toggle("open");
         }
-        // else if (contactForm.classList.contains("viewing") == false) {
-        //     contactForm.classList.add("viewing");
-        //     setTimeout(() => {
-        //         contactForm.classList.remove("hide");
-        //     }, 300);
-        // }
+
 
         if (content1.classList.contains("viewing") == true) {
             planet.classList.add("next");
@@ -937,8 +803,6 @@ aboutLink.addEventListener("click", () => {
         planet.classList.add("next");
         // const topPx = wrap1.getBoundingClientRect().top;
         // const leftPx = wrap1.getBoundingClientRect().left;
-        // console.log(wrap1.getBoundingClientRect().top)
-        // console.log(wrap1.getBoundingClientRect().left)
         // wrap1.style.transition = "2s"
         wrap1.style.opacity = "0";
         // ball1.style.animation = "paused";
@@ -967,7 +831,6 @@ aboutLink.addEventListener("click", () => {
         content1.scroll(0, 0);
         next2.classList.remove("viewing");
 
-        console.log("already on about page");
         hamburger.classList.remove('open');
         links.classList.remove('open');
         details.classList.remove("hide");
@@ -1078,7 +941,6 @@ aboutLink.addEventListener("click", () => {
         portfolio.classList.remove("fresh");
     }
     if (contactMe.classList.contains("viewing") == true) {
-        console.log("on about page");
         contactMe.style.display = "none";
         contactForm.style.display = "none";
         contactMe.style.opacity = "0";
@@ -1117,11 +979,9 @@ aboutLink.addEventListener("click", () => {
     }
     if (contactForm.classList.contains("viewing") == true) {
         content1.scroll(0, 0);
-        console.log("viewing contact form");
     }
     // if (contactForm.classList.contains("hide") == true) {
     //     content1.scroll(0, 0);
-    //     console.log("viewing contact form");
     //     titleButton.classList.remove('connect');
     //     titleName.classList.remove("fade");
     //     titleName.style.opacity = "0";
@@ -1179,7 +1039,6 @@ portfolioLink.addEventListener("click", () => {
         }, 2300)
     }
     if (content1.classList.contains("viewing") == true) {
-        console.log("on about page");
         content1.style.display = "none";
         content1.style.opacity = "0";
         next1.style.display = "none";
@@ -1221,13 +1080,11 @@ portfolioLink.addEventListener("click", () => {
 
     }
     if (portfolio.classList.contains("viewing") == true) {
-        console.log("already on about portfolio page");
         hamburger.classList.remove('open');
         links.classList.remove('open');
         details.classList.remove("hide");
     }
     if (contactMe.classList.contains("viewing") == true) {
-        console.log("on about page");
         contactMe.style.display = "none";
         contactMe.style.opacity = "0";
         next1.style.display = "none";
@@ -1279,10 +1136,8 @@ portfolioLink.addEventListener("click", () => {
 
     }
     if (contactForm.classList.contains("viewing") == true) {
-        console.log("viewing contact form");
     }
     if (contactForm.classList.contains("hide") == true) {
-        console.log("viewing contact form");
     }
 });
 
@@ -1292,13 +1147,10 @@ contactLink.addEventListener("click", () => {
         links.classList.toggle('open');
     }
     if (title.classList.contains("viewing") == true) {
-        console.log("on title page");
         planet.classList.remove("viewing");
         planet.classList.add("next");
         // const topPx = wrap1.getBoundingClientRect().top;
         // const leftPx = wrap1.getBoundingClientRect().left;
-        // console.log(wrap1.getBoundingClientRect().top)
-        // console.log(wrap1.getBoundingClientRect().left)
         // wrap1.style.transition = "2s"
         wrap3.style.opacity = "0";
         // ball1.style.animation = "paused";
@@ -1334,7 +1186,6 @@ contactLink.addEventListener("click", () => {
         }, 2700)
     }
     if (content1.classList.contains("viewing") == true) {
-        console.log("on about page");
         content1.style.display = "none";
         content1.scroll(0, 0);
         next2.style.display = "none";
@@ -1380,7 +1231,6 @@ contactLink.addEventListener("click", () => {
         next4.style.display = "none";
     }
     if (portfolio.classList.contains("viewing") == true) {
-        console.log("on portfolio page");
         portfolio.style.display = "none";
         portfolio.style.opacity = "0";
         contactForm.style.transform = "scale(1.2)";
@@ -1426,13 +1276,11 @@ contactLink.addEventListener("click", () => {
         }, 2900)
     }
     if (contactForm.classList.contains("viewing") == true) {
-        console.log("viewing contact form");
         contactForm.classList.toggle("hide");
         details.classList.toggle("hide");
         contactForm.classList.toggle("open");
     }
     // if (contactForm.classList.contains("hide") == true) {
-    //     console.log("viewing contact form");
     // }
 });
 
