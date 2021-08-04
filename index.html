@@ -25,12 +25,12 @@
                     <li class="portfolioLink"><a href="#">Portfolio</a></li>
                     <!-- <li class="link"><a href="#">Resume</a></li> -->
                     <li class="contactLink"><a href="#">Contact</a></li>
+                    <div class="socialMedia">
+                        <a href="https://www.linkedin.com/in/alex-c-540155122/" target="__blank"><i
+                                class="fab fa-linkedin"></i></a>
+                        <a href="https://www.github.com/askchu" target="__blank"><i class="fab fa-github"></i></a>
+                    </div>
                 </ul>
-                <div class="socialMedia">
-                    <a href="https://www.linkedin.com/in/alex-c-540155122/" target="__blank"><i
-                            class="fab fa-linkedin"></i></a>
-                    <a href="https://www.github.com/askchu" target="__blank"><i class="fab fa-github"></i></a>
-                </div>
             </div>
 
             <div id="nav-icon">
@@ -40,6 +40,7 @@
                 <span></span>
             </div>
         </nav>
+
 
         <main class="hero">
             <div class="shadow"></div>
@@ -78,7 +79,7 @@
                     <div class="content"></div>
                     <div class="fill"></div>
                     <div class="rope">
-                        <img class="string" src="./rope.png" alt="rope" srcset="">
+                        <img class="string" src="./pictures/rope.png" alt="rope" srcset="">
                     </div>
 
                     <div class="flame1"></div>
@@ -114,7 +115,7 @@
                 <div class="fg"></div>
                 <div class="fg1"></div>
                 <div class="sticker">
-                    <img src="./alex3.png" alt="">
+                    <img src="./pictures/alex3.png" alt="">
                 </div>
             </div>
 
@@ -164,7 +165,7 @@
             <div class="rocketBase"></div>
             <div class="rocket">
                 <div class="window">
-                    <img src="./alex3.png" alt="" srcset="">
+                    <img src="./pictures/alex3.png" alt="" srcset="">
                 </div>
             </div>
             <div class="rocketNose">
@@ -183,10 +184,10 @@
             <div class="content1">
                 <h1>About Me</h1>
                 <div class="img" data-speed="1">
-                    <img src="./alex3.png" alt="">
+                    <img src="./pictures/alex3.png" alt="">
                 </div>
                 <h3>Hello, nice to meet you!</h3>
-                <p> I'm Alex, a web developer currently residing in Toronto,
+                <p> I'm Alex, a web developer based in Toronto,
                     Ontario. I'm a hard-working individual who loves to design responsive websites with user
                     experience
                     using
@@ -194,7 +195,7 @@
                     continously striving to improve myself and have no difficulties learning new languages
                     and
                     tools.</p>
-                <p>During my career in the Canadian Armed Forces and various security details, I excel
+                <p>During my career in the Canadian Armed Forces and various security careers, I excel
                     in
                     all
                     types
@@ -212,41 +213,92 @@
             <div class="portfolio">
                 <h1 class="projectTitle">Projects</h1>
                 <div class="project app1">
-                    <h3>Hangry App</h3>
+                    <div class="front back1"></div>
+                    <h3 class="title">Hangry App</h3>
                 </div>
                 <div class="project app2">
-                    <h3>Adventures With Chu</h3>
+                    <div class="front back2"></div>
+                    <h3 class="title">Adventures With Chu</h3>
                 </div>
                 <div class="project app3">
-                    <h3>Disney Plus Clone</h3>
+                    <div class="front back3"></div>
+                    <h3 class="title">Disney Plus Clone</h3>
                 </div>
                 <div class="project app4">
-                    <h3>FreshCuts</h3>
+                    <div class="front back4"></div>
+                    <h3 class="title">FreshCuts</h3>
                 </div>
                 <div class="hangry">
                     <p>Hangry App is the first project I have created to assist other people like myself who have
                         problems
                         choosing a place to eat.
                     <p>
-                    <p>This responsive app allows the user to favourite his or her restaurants and then allow the app
+                    <p>This responsive app allows the user to favourite his or her restaurants and then allows the app
                         to
-                        choose just one. In addition, upon final selection, it displays the chosen restaurant and its
+                        randomize a selection. In addition, upon final selection, it displays the chosen restaurant and
+                        it's
                         geo-location.</p>
                     <p>This app uses NodeJs, Express, MongoDB and APIs to assist with the functionality of this project.
                     </p>
+
+                    <p>Link to project: <a href="https://hangry-web.herokuapp.com/" target="_blank">Hangry App</a></p>
+
+                    <div class="mp4">
+                        <p class="description">
+                            From the video below, you can see a preview of how the Hangry App can select a restaurant
+                            for the user.
+                        </p>
+                        <div class="video">
+                            <video src="./videos/hangryApp.mp4" controls></video>
+                        </div>
+                    </div>
                 </div>
                 <div class="adventuresWithChu">
                     <p>Adventures With Chu is a blogging app made with React and Firebase.</p>
                     <p>It has full CRUD functionality with Firebase login authentication and database.</p>
+                    <p>Link to project: <a href="https://adventures-with-chu.firebaseapp.com/"
+                            target="_blank">Adventures With Chu</a></p>
+                    <div class="mp4">
+                        <p class="description">
+                            From the video below, you can see a preview of the blog application.
+
+                        </p>
+                        <div class="video">
+                            <video src="./videos/bloggingApp.mp4" controls></video>
+                        </div>
+                    </div>
+
                 </div>
                 <div class="disneyPlus">
-                    <p>Disney Plus Clone is a front-end only project that imitates the Disney Plus website using only
+                    <p>Disney Plus Clone is a front-end only static page project that imitates the Disney Plus website
+                        using
+                        only
                         HTML, CSS and JavaScript.</p>
+                    <p>Link to project: <a href="https://askchu.github.io/disney-clone/" target="_blank">Disney Plus
+                            Clone</a></p>
+                    <div class="mp4">
+                        <p class="description">
+                            From the video below, you can see a preview of the website in action.
+                        </p>
+                        <div class="video">
+                            <video src="./videos/disneyPlus.mp4" controls></video>
+                        </div>
+                    </div>
                 </div>
                 <div class="freshCuts">
-                    <p>From my favourite past time hobby of gardening and lawn care to a front-end only lawn mowing
-                        product page.</p>
-                    <p>Created using only HTML, CSS and Javascript.</p>
+                    <p>Fresh Cuts is a front-end only product website that was inspired by my past time hobby of lawn
+                        mowing.</p>
+                    <p>Project was created using only HTML, CSS and Javascript.</p>
+                    <p>Link to project: <a href="https://askchu.github.io/lawnmow-product-page/" target="_blank">Fresh
+                            Cuts</a></p>
+                    <div class="mp4">
+                        <p class="description">
+                            From the video below, you can see a preview of the website in action.
+                        </p>
+                        <div class="video">
+                            <video src="./videos/freshCuts.mp4" controls></video>
+                        </div>
+                    </div>
                 </div>
             </div>
 

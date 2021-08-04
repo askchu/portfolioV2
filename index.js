@@ -97,7 +97,6 @@ const generateObjects = (number, star) => {
 generateObjects(900, smallStar);
 
 const allofNext = document.querySelectorAll(".next");
-console.log(allofNext);
 
 const next1 = document.querySelector(".instructions1");
 const next2 = document.querySelector(".instructions2");
@@ -334,6 +333,7 @@ app1.addEventListener("click", () => {
     for (let project of projects) {
         project.style.display = "none"
     }
+    details.style.border = "3px solid rgba(85, 172, 238, 1";
     portfolio.classList.add("hangry");
     hangryApp.style.display = "block";
     projectTitle.innerHTML = "Hangry App";
@@ -346,7 +346,7 @@ app1.addEventListener("click", () => {
 })
 app2.addEventListener("click", () => {
     portfolio.style.display = "block";
-    details.style.border = "3px solid green"
+    details.style.border = "3px solid rgb(74, 177, 245, 1)";
     portfolio.classList.add("advWitChu");
     // setTimeout
     for (let project of projects) {
@@ -365,7 +365,7 @@ app2.addEventListener("click", () => {
 })
 app3.addEventListener("click", () => {
     portfolio.style.display = "block";
-    details.style.border = "3px solid red"
+    details.style.border = "3px solid rgb(42, 59, 123)"
     portfolio.classList.add("disney");
     // setTimeout
     for (let project of projects) {
@@ -383,7 +383,7 @@ app3.addEventListener("click", () => {
 })
 app4.addEventListener("click", () => {
     portfolio.style.display = "block";
-    details.style.border = "3px solid purple";
+    details.style.border = "3px solid #4e9525";
     portfolio.classList.add("fresh");
     // setTimeout
     for (let project of projects) {
@@ -420,6 +420,7 @@ nextProject1.addEventListener("click", () => {
     hangryApp.style.display = "none";
     projectTitle.innerHTML = "Adventures With Chu";
     adventuresWithChu.style.display = "block";
+    details.scroll(0, 0);
     projectsMenu1.style.display = "none";
     projectsMenu1.classList.remove("viewing");
 
@@ -433,7 +434,7 @@ nextProject1.addEventListener("click", () => {
     nextProject2.classList.add("viewing");
 
     portfolio.classList.add("advWitChu");
-    details.style.border = "3px solid green"
+    details.style.border = "3px solid rgb(74, 177, 245, 1)";
 });
 
 projectsMenu2.addEventListener("click", () => {
@@ -458,6 +459,8 @@ nextProject2.addEventListener("click", () => {
     adventuresWithChu.style.display = "none";
     projectTitle.innerHTML = "Disney Plus Clone";
     disneyPlus.style.display = "block";
+    details.scroll(0, 0);
+
     projectsMenu2.style.display = "none";
     projectsMenu2.classList.remove("viewing");
 
@@ -472,13 +475,15 @@ nextProject2.addEventListener("click", () => {
 
     portfolio.classList.remove("advWitChu");
     portfolio.classList.add("disney");
-    details.style.border = "3px solid red";
+    details.style.border = "3px solid rgb(42, 59, 123)"
 })
 
 nextProject3.addEventListener("click", () => {
     disneyPlus.style.display = "none";
     projectTitle.innerHTML = "Fresh Cuts";
     freshCuts.style.display = "block";
+    details.scroll(0, 0);
+
     projectsMenu3.style.display = "none";
     projectsMenu3.classList.remove("viewing");
 
@@ -493,7 +498,8 @@ nextProject3.addEventListener("click", () => {
 
     portfolio.classList.remove("disney");
     portfolio.classList.add("fresh");
-    details.style.border = "3px solid purple";
+    details.style.border = "3px solid #4e9525";
+
 });
 
 projectsMenu3.addEventListener("click", () => {
@@ -751,6 +757,7 @@ form.addEventListener('submit', (e) => {
 
     setTimeout(() => {
         next1.style.display = "block";
+        next1.classList.add("viewing");
     }, 8300)
 })
 
@@ -777,7 +784,7 @@ const sendEmail = async (url = '', data) => {
     return response.json();
 }
 
-console.log(titleName.getBoundingClientRect().top);
+// console.log(titleName.getBoundingClientRect().top);
 
 const downloadResume = document.querySelector(".download");
 
@@ -1450,4 +1457,5 @@ content1.addEventListener("scroll", () => {
 
 })
 
-// NOTE: add a class for z-INDEX for contact form
+
+

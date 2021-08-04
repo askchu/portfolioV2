@@ -74,7 +74,30 @@ nav a {
 
 
 .socialMedia {
-    display: none;
+  /* position: absolute; */
+  display: flex;
+  justify-content: space-evenly;
+  /* bottom: 0; */
+  text-align: center;
+  width: 50%;
+  max-width: 200px;
+  margin: 0 auto;
+  height: max-content;
+  background: transparent;
+  /* background: white; */
+  z-index: 6500;
+  /* padding-bottom: 20px; */
+}
+.socialMedia a {
+  font-size: 2rem;
+  color: white;
+}
+.socialMedia a:nth-of-type(1){
+  margin: 0 20px;
+}
+
+.socialMedia a:hover{
+  box-shadow: 0 8px 32px 0 rgba(58, 64, 157, 0.4);
 }
 
 #nav-icon {
@@ -1065,7 +1088,9 @@ select:-webkit-autofill:focus {
     body{
     overflow: hidden
   }
-
+  .socialMedia a:nth-of-type(1){
+    margin: 0;
+  }
   #nav-icon{
     display: flex;
   }
@@ -1093,7 +1118,7 @@ select:-webkit-autofill:focus {
   .link{
     transform: translateX(150%);
   }
-
+ 
   @keyframes slideIn {
     0%{
       display: none;
@@ -1534,66 +1559,153 @@ select:-webkit-autofill:focus {
   cursor: pointer;
   transform: scale(1.05);
 }
-.project:not(:hover){
+/* .project:not(:hover){
   filter: saturate(0.5);
-}
+} */
 .portfolio h1{
   grid-area: title;
 }
 .app1 {
-  background: blue;
+  position: relative;
+  background: linear-gradient(rgba(26, 183, 234, 80%), rgba(85, 172, 238, 1));
   grid-area: app1;
   border-top-left-radius: 10px;
 }
+/* .app1:hover{
+  background: url(./pictures/hangryPic.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px black;
+} */
+.front{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.app1:hover .back1{
+  background: url(./pictures/hangryPic.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-top-left-radius: 10px;
+}
+.app1:hover .title{
+  padding: 5px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-shadow: 0px 2px 2px black;
+  background: linear-gradient(rgba(26, 183, 234, 50%), rgba(85, 172, 238, 0.5));
+  border-radius: 10px;
+}
+
+
 .app2 {
-  background: green;
+  position: relative;
+  background: linear-gradient(
+35deg
+,#81d6f2,#4ab1f5);
   grid-area: app2;
   border-top-right-radius: 10px;
 }
+.app2:hover .back2{
+  background: url(./pictures/adventuresPic.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-top-right-radius: 10px;
+  
+}
+.app2:hover .title{
+  padding: 2px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-shadow: 0px 2px 2px black;
+  background: linear-gradient(
+35deg
+,rgb(24, 179, 231, 0.5),rgb(74, 177, 245, 0.5));
+  border-radius: 10px;
+}
+
 .app3 {
-  background: red;
+  position: relative;
+  background: linear-gradient(
+180deg
+, black, rgb(27, 38, 77), rgb(42, 59, 123));
   grid-area: app3;
   border-bottom-left-radius: 10px;
 }
+
+.app3:hover .back3{
+  background: url(./pictures/disneyPic.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-bottom-left-radius: 10px;
+}
+
+.app3:hover .title{
+  padding: 2px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-shadow: 0px 2px 2px black;
+ background: linear-gradient(
+180deg
+, black, rgb(27, 38, 77, 0.9), rgb(42, 59, 123, 0.9));
+  border-radius: 10px;
+}
+
 .app4 {
-  background: purple;
+  position: relative;
+  background: #4e9525;
   grid-area: app4;
   border-bottom-right-radius: 10px;
 }
+
+.app4:hover .back4{
+  background: url(./pictures/freshPic.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-bottom-right-radius: 10px;
+}
+
+.app4:hover .title{
+  padding: 4px;
+  font-weight: 700;
+  font-size: 1.3rem;
+  text-shadow: 0px 2px 2px black;
+  background: rgb(78, 149, 37, 0.5);
+  border-radius: 10px;
+}
+
 .portfolio::-webkit-scrollbar{
   width: 10px;
 }
 .portfolio::-webkit-scrollbar-track{
-  border: 2px solid grey;
+  border: 2px solid white;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
 .portfolio::-webkit-scrollbar-thumb{
   background: linear-gradient(
-    45deg,
-    white,
-    blue
-    );
+35deg
+,rgb(24, 179, 231, 1),rgb(74, 177, 245, 1));
     border-radius: 5px;
     border-top-left-radius: 0; 
 }
 
 .portfolio.advWitChu::-webkit-scrollbar-thumb{
   background: linear-gradient(
-    45deg,
-    white,
-    green
-    );
+35deg
+,#81d6f2,#4ab1f5);
     border-radius: 5px;
     border-top-left-radius: 0; 
 }
 
 .portfolio.disney::-webkit-scrollbar-thumb{
-  background: linear-gradient(
-    45deg,
-    white,
-    red
-    );
+  background:  linear-gradient(
+180deg
+,  rgb(27, 38, 77, 1), rgb(42, 59, 123, 1), white);
     border-radius: 5px;
     border-top-left-radius: 0; 
 }
@@ -1602,7 +1714,7 @@ select:-webkit-autofill:focus {
   background: linear-gradient(
     45deg,
     white,
-    purple
+  #4e9525
     );
     border-radius: 5px;
     border-top-left-radius: 0; 
@@ -1615,27 +1727,89 @@ select:-webkit-autofill:focus {
     margin-top: 25px;
 }
 .portfolio p{
+    font-weight: 700;
     margin-bottom: 15px;
 }
 .hangry{
+  /* background: black; */
   display: none;
+  width: 100%;
+  height: 100%;
+}
+.hangry a{
+  text-decoration: none;
+  color: rgba(85, 172, 238, 1);
+}
+.hangry a:hover{
+  cursor: pointer;
+  color: rgb(161, 207, 243);
+
+}
+.mp4{
+  width: 100%;
+  margin-bottom: 20px;
+  /* height: 100%; */
+}
+.mp4 p {
+  margin-bottom: 20px;
+}
+.mp4 .video{
+  width: 100%;
+  height: 100%;
+}
+.mp4 .video video{
   width: 100%;
   height: 100%;
 }
 .adventuresWithChu{
   display: none;
   width: 100%;
-  height: 100vh;
+  height: 100%;
+}
+.adventuresWithChu a{
+  text-decoration: none;
+  color: rgb(74, 177, 245, 1);
+}
+.adventuresWithChu a:hover{
+  cursor: pointer;
+  color: rgb(176, 215, 242);
 }
 .disneyPlus{
   display: none;
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
+.disneyPlus a{
+  text-decoration: none;
+  color:  #4e9525;
+}
+.disneyPlus a:hover{
+  cursor: pointer;
+  color: #7ae83a;
+}
+.disneyPlus a{
+  text-decoration: none;
+  color: rgb(81, 112, 225);
+}
+.disneyPlus a:hover{
+  cursor: pointer;
+  color: rgb(104, 132, 235);
+}
+
+
 .freshCuts{
   display: none;
   width: 100%;
-  height: 100vh;
+  height: 100%;
+}
+
+.freshCuts a{
+  text-decoration: none;
+  color: #7ae83a;
+}
+.freshCuts a:hover{
+  cursor: pointer;
+  color:  #a7e882;
 }
 
 .contactMe{
@@ -1651,3 +1825,4 @@ select:-webkit-autofill:focus {
   scroll-behavior: smooth;
   transition: 0.5s;
 }
+
