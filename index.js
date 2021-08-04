@@ -70,7 +70,8 @@ const generateObjects = (number, star) => {
             stars.appendChild(copy);
         }
         else {
-            star.style.animation = `shimmer ${random2}s linear infinite`
+            star.style.animation = `shimmer ${random2}s linear`
+            star.style.animationIterationCount = "3";
             stars.appendChild(copy);
         }
     }
@@ -364,8 +365,8 @@ projectsMenu1.addEventListener("click", () => {
 nextProject1.addEventListener("click", () => {
     hangryApp.style.display = "none";
     projectTitle.innerHTML = "Adventures With Chu";
+    details.scrollTo(0, 0)
     adventuresWithChu.style.display = "block";
-    details.scroll(0, 0);
     projectsMenu1.style.display = "none";
     projectsMenu1.classList.remove("viewing");
 
@@ -403,8 +404,8 @@ projectsMenu2.addEventListener("click", () => {
 nextProject2.addEventListener("click", () => {
     adventuresWithChu.style.display = "none";
     projectTitle.innerHTML = "Disney Plus Clone";
-    disneyPlus.style.display = "block";
     details.scroll(0, 0);
+    disneyPlus.style.display = "block";
 
     projectsMenu2.style.display = "none";
     projectsMenu2.classList.remove("viewing");
@@ -426,8 +427,8 @@ nextProject2.addEventListener("click", () => {
 nextProject3.addEventListener("click", () => {
     disneyPlus.style.display = "none";
     projectTitle.innerHTML = "Fresh Cuts";
-    freshCuts.style.display = "block";
     details.scroll(0, 0);
+    freshCuts.style.display = "block";
 
     projectsMenu3.style.display = "none";
     projectsMenu3.classList.remove("viewing");
@@ -1371,5 +1372,3 @@ content1.addEventListener("scroll", () => {
     }
 
 })
-
-

@@ -1292,7 +1292,7 @@ select:-webkit-autofill:focus {
   position: relative;
   height: 100%;
   width: 100%;
-  text-align: justify;
+  text-align: left;
   padding: 40px 40px 50px 40px;
   overflow: auto;
   scroll-behavior: smooth;
