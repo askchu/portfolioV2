@@ -65,7 +65,7 @@ const generateObjects = (number, star) => {
             star.style.animationName = "starsAnimation"
             star.style.animationDuration = `${random1}s`;
             star.style.animationDelay = `${random2}s`;
-            star.style.animationIterationCount = "infinite";
+            star.style.animationIterationCount = "1";
             star.style.zIndex = `${random}`;
             stars.appendChild(copy);
         }
@@ -142,7 +142,6 @@ titleButton.addEventListener('click', () => {
 
 
 
-
 next1.addEventListener('click', () => {
     planet.classList.remove("viewing");
     planet.classList.add("next");
@@ -154,13 +153,16 @@ next1.addEventListener('click', () => {
     next1.classList.remove("viewing");
 
     setTimeout(() => {
+
         details.style.display = "block";
         details.style.animation = "ballToSquare 1.5s forwards";
         content1.style.display = "block";
     }, 950)
 
     setTimeout(() => {
-
+        for (let star of allStars) {
+            star.style.animation = "paused";
+        }
         details.classList.add("viewing");
         content1.classList.add("viewing");
         content1.style.opacity = "1";
@@ -172,6 +174,7 @@ next1.addEventListener('click', () => {
 
 
 next2.addEventListener('click', () => {
+
     hamburger.style.pointerEvents = "none";
 
     content1.style.display = "none";
@@ -697,7 +700,7 @@ window.addEventListener('load', () => {
 
 // Hamburger Icon
 hamburger.addEventListener('click',
-    function (e) {
+    () => {
         hamburger.classList.toggle('open');
 
         links.classList.toggle('open');
