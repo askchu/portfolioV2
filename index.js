@@ -691,12 +691,20 @@ window.addEventListener('load', () => {
     const topPx = titleButton.getBoundingClientRect().top - 220;
     planet.style.top = `${topPx}px`
 
+
+    aboutLink.style.pointerEvents = "none";
+    portfolioLink.style.pointerEvents = "none";
+    contactLink.style.pointerEvents = "none";
+
     setTimeout(() => {
         next1.style.display = "block"
         next1.classList.add("viewing");
         hamburger.style.pointerEvents = "auto";
         rocket.style.display = "none";
         rocketFlame.style.animation = "none";
+        aboutLink.style.pointerEvents = "auto";
+        portfolioLink.style.pointerEvents = "auto";
+        contactLink.style.pointerEvents = "auto";
     }, 6000);
 })
 
