@@ -101,6 +101,7 @@ const contactMe = document.querySelector(".contactMe");
 // Title Button
 titleButton.addEventListener('click', () => {
 
+    details.style.border = "3px solid #F4B400"
     planet.classList.remove("viewing");
     planet.classList.add("next");
     hamburger.style.pointerEvents = "none";
@@ -111,8 +112,11 @@ titleButton.addEventListener('click', () => {
     next1.style.display = "none";
     next1.classList.remove("viewing");
     next1.classList.remove("hide");
-
     contactForm.style.transform = "scale(1.1)";
+
+    aboutLink.style.pointerEvents = "none";
+    portfolioLink.style.pointerEvents = "none";
+    contactLink.style.pointerEvents = "none";
 
     setTimeout(() => {
         details.style.display = "block";
@@ -134,8 +138,11 @@ titleButton.addEventListener('click', () => {
     setTimeout(() => {
         contactForm.classList.add("open");
         hamburger.style.pointerEvents = "auto";
-    }, 2700)
 
+        aboutLink.style.pointerEvents = "auto";
+        portfolioLink.style.pointerEvents = "auto";
+        contactLink.style.pointerEvents = "auto";
+    }, 2700)
 
 })
 
