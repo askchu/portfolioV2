@@ -1044,7 +1044,9 @@ select:-webkit-autofill:focus {
      left: 50%;
     animation: rocketMoveY 10s forwards;
   }
-
+  .instructions{
+    width: 100%;
+  }
 }
 
 @media (max-width: 1250px){
