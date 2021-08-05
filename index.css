@@ -1754,11 +1754,10 @@ select:-webkit-autofill:focus {
 
 footer{
   position: absolute;
-  bottom: 0;
+  top: 96%;
   right: 0;
   z-index: 6000;
   color: white;
-  margin-bottom: 20px;
   margin-right: 20px;
   font-size: 0.8rem;
 }
@@ -1780,14 +1779,12 @@ footer{
     max-height: 100px;
   }
   .down {
-    /* display: block; */
     position: absolute;
 	  text-align: center;
     margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
     height: 50px;
-    /* width: 150px; */
     width: 100%;
     padding: 15px 0;
     animation: bounce 2s infinite;
@@ -1835,8 +1832,9 @@ footer{
     opacity: 1;
     }
   }
-
-
+  footer{
+    font-size: 0.7rem;
+  }
 }
 
 @media (max-width: 1250px){
