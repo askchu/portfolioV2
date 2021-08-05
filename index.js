@@ -1419,6 +1419,9 @@ contactLink.addEventListener("click", () => {
             details.style.border = "3px solid  #F4B400"
             details.style.animation = "ballToSquare 1.5s 0.5s forwards";
             contactMe.style.display = "block";
+            if (mobile_view.matches) {
+                contactForm.style.transform = "translateY(-10px)"
+            }
             contactForm.style.display = "block";
             contactForm.style.opacity = "0";
         }, 1000)
@@ -1475,7 +1478,9 @@ contactLink.addEventListener("click", () => {
             wrap3.style.opacity = "0";
             details.style.border = "3px solid  #F4B400"
             details.style.animation = "ballToSquare 1.5s 0.5s forwards";
-
+            if (mobile_view.matches) {
+                contactForm.style.transform = "translateY(-10px)"
+            }
             contactMe.style.display = "block";
             contactForm.style.display = "block";
             contactForm.style.opacity = "0";
