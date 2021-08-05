@@ -145,6 +145,9 @@ titleButton.addEventListener('click', () => {
         contactMe.classList.add("viewing");
         contactMe.style.opacity = "1";
         contactForm.classList.add("viewing");
+        if (mobile_view.matches) {
+            contactForm.style.transform = "translateY(-10px)"
+        }
         contactForm.style.border = "none";
         contactForm.style.backgroundColor = "transparent";
         contactForm.style.boxShadow = "none";
@@ -169,6 +172,7 @@ next1.addEventListener('click', () => {
 
     if (mobile_view.matches) {
         downArrow.style.display = "none";
+        downArrow.classList.remove("viewing");
     }
     details.style.border = "3px solid #E3746B";
     planet.classList.remove("viewing");
@@ -711,6 +715,7 @@ form.addEventListener('submit', (e) => {
 
         if (mobile_view.matches) {
             downArrow.style.display = "block";
+            downArrow.classList.add("viewing");
         }
     }, 8300)
 
@@ -791,6 +796,7 @@ window.addEventListener('load', () => {
     setTimeout(() => {
         if (mobile_view.matches) {
             downArrow.style.display = "block";
+            downArrow.classList.add("viewing");
         } else {
             downArrow.style.display = "none";
         }
@@ -827,7 +833,9 @@ hamburger.addEventListener('click',
 
         planet.style.animationDelay = "0s";
 
-
+        if (downArrow.classList.contains("viewing") == true) {
+            downArrow.classList.toggle("hide");
+        }
 
         if (planet.classList.contains("viewing") == true) {
             planet.classList.toggle("next");
@@ -1353,6 +1361,9 @@ contactLink.addEventListener("click", () => {
             contactMe.classList.add("viewing");
             contactMe.style.opacity = "1";
             contactForm.classList.add("viewing");
+            if (mobile_view.matches) {
+                contactForm.style.transform = "translateY(-10px)"
+            }
             contactForm.style.border = "none";
             contactForm.style.backgroundColor = "transparent";
             contactForm.style.boxShadow = "none";
