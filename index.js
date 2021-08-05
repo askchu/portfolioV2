@@ -101,6 +101,11 @@ const contactMe = document.querySelector(".contactMe");
 
 // Title Button
 titleButton.addEventListener('click', () => {
+    let bigger_mobile_view = window.matchMedia("(max-width: 771px)");
+
+    if (bigger_mobile_view.matches) {
+        downArrow.style.display = "none";
+    }
     let mobile_view = window.matchMedia("(max-width: 505px)");
     if (mobile_view.matches) {
         envelopeBG.style.width = "0";
@@ -702,18 +707,22 @@ form.addEventListener('submit', (e) => {
     }, 7500)
 
     setTimeout(() => {
-        next1.style.display = "block";
-        next1.classList.add("viewing");
         planet.classList.add("viewing");
 
         if (mobile_view.matches) {
             downArrow.style.display = "block";
         }
+    }, 8300)
+
+    setTimeout(() => {
+        next1.style.display = "block";
+        next1.classList.add("viewing");
+
         hamburger.style.pointerEvents = "auto";
         aboutLink.style.pointerEvents = "auto";
         portfolioLink.style.pointerEvents = "auto";
         contactLink.style.pointerEvents = "auto";
-    }, 8300)
+    }, 8600)
 })
 
 
@@ -780,8 +789,6 @@ window.addEventListener('load', () => {
     contactLink.style.pointerEvents = "none";
 
     setTimeout(() => {
-        next1.style.display = "block"
-        next1.classList.add("viewing");
         if (mobile_view.matches) {
             downArrow.style.display = "block";
         } else {
@@ -792,6 +799,11 @@ window.addEventListener('load', () => {
         portfolioLink.style.pointerEvents = "auto";
         contactLink.style.pointerEvents = "auto";
     }, 6000);
+
+    setTimeout(() => {
+        next1.style.display = "block"
+        next1.classList.add("viewing");
+    }, 6600);
 
     setTimeout(() => {
         rocket.style.display = "none";
@@ -1310,11 +1322,8 @@ contactLink.addEventListener("click", () => {
     if (title.classList.contains("viewing") == true) {
         planet.classList.remove("viewing");
         planet.classList.add("next");
-        // const topPx = wrap1.getBoundingClientRect().top;
-        // const leftPx = wrap1.getBoundingClientRect().left;
-        // wrap1.style.transition = "2s"
+
         wrap3.style.opacity = "0";
-        // ball1.style.animation = "paused";
         title.classList.add("fade");
         title.classList.remove("viewing");
         next1.style.display = "none";
