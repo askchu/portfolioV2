@@ -915,6 +915,9 @@ logo.addEventListener("click", () => {
 // NAV LINKS
 
 aboutLink.addEventListener("click", () => {
+    downArrow.classList.remove("viewing");
+    downArrow.style.display = "none"
+
     next2.style.display = "none";
     content1.scroll(0, 0);
     if (planet.classList.contains("next") == true) {
@@ -1130,6 +1133,10 @@ aboutLink.addEventListener("click", () => {
 });
 
 portfolioLink.addEventListener("click", () => {
+    downArrow.classList.remove("viewing");
+    downArrow.style.display = "none"
+
+
     if (planet.classList.contains("next") == true) {
         hamburger.classList.toggle('open');
         links.classList.toggle('open');
@@ -1317,6 +1324,9 @@ portfolioLink.addEventListener("click", () => {
 const envelopeBG = document.querySelector(".bg");
 
 contactLink.addEventListener("click", () => {
+    downArrow.classList.remove("viewing");
+    downArrow.style.display = "none"
+
     let mobile_view = window.matchMedia("(max-width: 505px)");
 
     if (mobile_view.matches) {
