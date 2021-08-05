@@ -205,6 +205,25 @@ next1.addEventListener('click', () => {
 
 })
 
+next1.addEventListener("mouseover", () => {
+    next1.style.animation = "paused";
+});
+next1.addEventListener("mouseout", () => {
+    next1.style.animation = "shimmer 1.2s linear infinite alternate";
+});
+next2.addEventListener("mouseover", () => {
+    next2.style.animation = "paused";
+});
+next2.addEventListener("mouseout", () => {
+    next2.style.animation = "shimmer 1.2s linear infinite alternate";
+});
+next3.addEventListener("mouseover", () => {
+    next3.style.animation = "paused";
+});
+next3.addEventListener("mouseout", () => {
+    next3.style.animation = "shimmer 1.2s linear infinite alternate";
+});
+
 
 next2.addEventListener('click', () => {
 
@@ -1535,3 +1554,4 @@ content1.addEventListener("scroll", () => {
     }
 
 })
+
