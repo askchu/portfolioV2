@@ -1752,6 +1752,18 @@ select:-webkit-autofill:focus {
   transition: 0.5s;
 }
 
+footer{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 6000;
+  color: white;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  font-size: 0.8rem;
+}
+
+
 
 /* NOTE: MediaQuery for 770px */
 
