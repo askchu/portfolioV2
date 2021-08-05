@@ -61,7 +61,6 @@ const generateObjects = (number, star) => {
         const copy = star.cloneNode(true)
         star.style.transform = `translateX(${random}px)`;
         if (i % 2 == 0) {
-            star.style.width = "1px"
             star.style.animationName = "starsAnimation"
             star.style.animationDuration = `${random1}s`;
             star.style.animationDelay = `${random2}s`;
@@ -778,8 +777,7 @@ window.addEventListener('load', () => {
     let mobile_view = window.matchMedia("(max-width: 771px)");
 
     if (mobile_view.matches) {
-        const bottomPx = titleButton.getBoundingClientRect().bottom;
-        downArrow.style.top = `${bottomPx}px`;
+        downArrow.style.top = `65%`;
     }
 
     hamburger.style.pointerEvents = "none"
