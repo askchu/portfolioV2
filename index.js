@@ -822,13 +822,14 @@ window.addEventListener('load', () => {
         } else {
             downArrow.style.display = "none";
         }
+
+    }, 6000);
+
+    setTimeout(() => {
         hamburger.style.pointerEvents = "auto";
         aboutLink.style.pointerEvents = "auto";
         portfolioLink.style.pointerEvents = "auto";
         contactLink.style.pointerEvents = "auto";
-    }, 6000);
-
-    setTimeout(() => {
         next1.style.display = "block"
         next1.classList.add("viewing");
     }, 6600);
@@ -1226,6 +1227,10 @@ portfolioLink.addEventListener("click", () => {
         aboutLink.style.pointerEvents = "none";
         portfolioLink.style.pointerEvents = "none";
         contactLink.style.pointerEvents = "none";
+        app1.style.pointerEvents = "none";
+        app2.style.pointerEvents = "none";
+        app3.style.pointerEvents = "none";
+        app4.style.pointerEvents = "none";
 
 
         setTimeout(() => {
@@ -1262,6 +1267,10 @@ portfolioLink.addEventListener("click", () => {
             aboutLink.style.pointerEvents = "auto";
             portfolioLink.style.pointerEvents = "auto";
             contactLink.style.pointerEvents = "auto";
+            app1.style.pointerEvents = "auto";
+            app2.style.pointerEvents = "auto";
+            app3.style.pointerEvents = "auto";
+            app4.style.pointerEvents = "auto";
         }, 3000)
 
 
@@ -1297,6 +1306,10 @@ portfolioLink.addEventListener("click", () => {
         aboutLink.style.pointerEvents = "none";
         portfolioLink.style.pointerEvents = "none";
         contactLink.style.pointerEvents = "none";
+        app1.style.pointerEvents = "none";
+        app2.style.pointerEvents = "none";
+        app3.style.pointerEvents = "none";
+        app4.style.pointerEvents = "none";
         setTimeout(() => {
             portfolio.style.opacity = "1";
             next3.style.display = "block";
@@ -1306,7 +1319,11 @@ portfolioLink.addEventListener("click", () => {
             aboutLink.style.pointerEvents = "auto";
             portfolioLink.style.pointerEvents = "auto";
             contactLink.style.pointerEvents = "auto";
-        }, 800)
+            app1.style.pointerEvents = "auto";
+            app2.style.pointerEvents = "auto";
+            app3.style.pointerEvents = "auto";
+            app4.style.pointerEvents = "auto";
+        }, 450)
     }
     if (portfolio.classList.contains("advWitChu") == true) {
         adventuresWithChu.style.display = "none";
@@ -1332,6 +1349,10 @@ portfolioLink.addEventListener("click", () => {
         aboutLink.style.pointerEvents = "none";
         portfolioLink.style.pointerEvents = "none";
         contactLink.style.pointerEvents = "none";
+        app1.style.pointerEvents = "none";
+        app2.style.pointerEvents = "none";
+        app3.style.pointerEvents = "none";
+        app4.style.pointerEvents = "none";
         setTimeout(() => {
             portfolio.style.opacity = "1";
             next3.style.display = "block";
@@ -1341,7 +1362,11 @@ portfolioLink.addEventListener("click", () => {
             aboutLink.style.pointerEvents = "auto";
             portfolioLink.style.pointerEvents = "auto";
             contactLink.style.pointerEvents = "auto";
-        }, 800)
+            app1.style.pointerEvents = "auto";
+            app2.style.pointerEvents = "auto";
+            app3.style.pointerEvents = "auto";
+            app4.style.pointerEvents = "auto";
+        }, 450)
     }
     if (portfolio.classList.contains("disney") == true) {
         disneyPlus.style.display = "none";
@@ -1367,6 +1392,10 @@ portfolioLink.addEventListener("click", () => {
         aboutLink.style.pointerEvents = "none";
         portfolioLink.style.pointerEvents = "none";
         contactLink.style.pointerEvents = "none";
+        app1.style.pointerEvents = "none";
+        app2.style.pointerEvents = "none";
+        app3.style.pointerEvents = "none";
+        app4.style.pointerEvents = "none";
         setTimeout(() => {
             portfolio.style.opacity = "1";
             next3.style.display = "block";
@@ -1376,7 +1405,11 @@ portfolioLink.addEventListener("click", () => {
             aboutLink.style.pointerEvents = "auto";
             portfolioLink.style.pointerEvents = "auto";
             contactLink.style.pointerEvents = "auto";
-        }, 800)
+            app1.style.pointerEvents = "auto";
+            app2.style.pointerEvents = "auto";
+            app3.style.pointerEvents = "auto";
+            app4.style.pointerEvents = "auto";
+        }, 450)
     }
     if (portfolio.classList.contains("fresh") == true) {
         freshCuts.style.display = "none";
@@ -1402,6 +1435,10 @@ portfolioLink.addEventListener("click", () => {
         aboutLink.style.pointerEvents = "none";
         portfolioLink.style.pointerEvents = "none";
         contactLink.style.pointerEvents = "none";
+        app1.style.pointerEvents = "none";
+        app2.style.pointerEvents = "none";
+        app3.style.pointerEvents = "none";
+        app4.style.pointerEvents = "none";
         setTimeout(() => {
             portfolio.style.opacity = "1";
             next3.style.display = "block";
@@ -1411,7 +1448,11 @@ portfolioLink.addEventListener("click", () => {
             aboutLink.style.pointerEvents = "auto";
             portfolioLink.style.pointerEvents = "auto";
             contactLink.style.pointerEvents = "auto";
-        }, 800)
+            app1.style.pointerEvents = "auto";
+            app2.style.pointerEvents = "auto";
+            app3.style.pointerEvents = "auto";
+            app4.style.pointerEvents = "auto";
+        }, 450)
     }
 
     if (contactMe.classList.contains("viewing") == true) {
@@ -1430,7 +1471,10 @@ portfolioLink.addEventListener("click", () => {
         aboutLink.style.pointerEvents = "none";
         portfolioLink.style.pointerEvents = "none";
         contactLink.style.pointerEvents = "none";
-
+        app1.style.pointerEvents = "none";
+        app2.style.pointerEvents = "none";
+        app3.style.pointerEvents = "none";
+        app4.style.pointerEvents = "none";
 
         setTimeout(() => {
             details.classList.remove("viewing");
@@ -1472,6 +1516,10 @@ portfolioLink.addEventListener("click", () => {
             aboutLink.style.pointerEvents = "auto";
             portfolioLink.style.pointerEvents = "auto";
             contactLink.style.pointerEvents = "auto";
+            app1.style.pointerEvents = "auto";
+            app2.style.pointerEvents = "auto";
+            app3.style.pointerEvents = "auto";
+            app4.style.pointerEvents = "auto";
 
         }, 2700)
 
