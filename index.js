@@ -1531,6 +1531,67 @@ contactLink.addEventListener("click", () => {
             contactLink.style.pointerEvents = "auto";
         }, 2900)
     }
+
+    if (portfolio.classList.contains("hangry") == true) {
+        hangryApp.style.display = "none";
+        projectTitle.innerHTML = "Projects";
+        portfolio.style.display = "grid";
+        for (let project of projects) {
+            project.style.display = "flex"
+        }
+        projectsMenu1.style.display = "none";
+        projectsMenu1.classList.remove("viewing");
+
+        nextProject1.style.display = "none";
+        nextProject1.classList.remove("viewing");
+
+        portfolio.classList.remove("hangry");
+    }
+    if (portfolio.classList.contains("advWitChu") == true) {
+        adventuresWithChu.style.display = "none";
+        projectTitle.innerHTML = "Projects";
+        portfolio.style.display = "grid";
+        for (let project of projects) {
+            project.style.display = "flex"
+        }
+        projectsMenu2.style.display = "none";
+        projectsMenu2.classList.remove("viewing");
+
+        nextProject2.style.display = "none";
+        nextProject2.classList.remove("viewing");
+
+        portfolio.classList.remove("advWitChu");
+    }
+    if (portfolio.classList.contains("disney") == true) {
+        disneyPlus.style.display = "none";
+        projectTitle.innerHTML = "Projects";
+        portfolio.style.display = "grid";
+        for (let project of projects) {
+            project.style.display = "flex"
+        }
+        projectsMenu3.style.display = "none";
+        projectsMenu3.classList.remove("viewing");
+
+        nextProject3.style.display = "none";
+        nextProject3.classList.remove("viewing");
+
+        portfolio.classList.remove("disney");
+    }
+    if (portfolio.classList.contains("fresh") == true) {
+        freshCuts.style.display = "none";
+        projectTitle.innerHTML = "Projects";
+        portfolio.style.display = "grid";
+        for (let project of projects) {
+            project.style.display = "flex"
+        }
+        projectsMenu4.style.display = "none";
+        projectsMenu4.classList.remove("viewing");
+
+        nextProject4.style.display = "none";
+        nextProject4.classList.remove("viewing");
+
+        portfolio.classList.remove("fresh");
+    }
     if (contactForm.classList.contains("viewing") == true) {
         contactForm.classList.toggle("hide");
         details.classList.toggle("hide");
