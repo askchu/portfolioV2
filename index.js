@@ -4,7 +4,7 @@ const navbar = document.querySelector('.navbar');
 const title = document.querySelector('.title');
 const titleButton = document.querySelector('.titleButton');
 const titleName = document.querySelector('.titleName');
-
+const downArrow = document.querySelector(".down");
 
 const link = document.querySelectorAll('.link');
 
@@ -160,6 +160,11 @@ titleButton.addEventListener('click', () => {
 
 
 next1.addEventListener('click', () => {
+    let mobile_view = window.matchMedia("(max-width: 771px)");
+
+    if (mobile_view.matches) {
+        downArrow.style.display = "none";
+    }
     details.style.border = "3px solid #E3746B";
     planet.classList.remove("viewing");
     planet.classList.add("next");
@@ -608,9 +613,13 @@ const formFG1 = document.querySelector('.fg1');
 const sticker = document.querySelector('.sticker')
 
 form.addEventListener('submit', (e) => {
+    let mobile_view = window.matchMedia("(max-width: 771px)");
 
     e.preventDefault();
     hamburger.style.pointerEvents = "none";
+    aboutLink.style.pointerEvents = "none";
+    portfolioLink.style.pointerEvents = "none";
+    contactLink.style.pointerEvents = "none";
     contactForm.classList.remove("open");
     details.classList.remove("viewing");
     details.style.display = "none";
@@ -696,7 +705,14 @@ form.addEventListener('submit', (e) => {
         next1.style.display = "block";
         next1.classList.add("viewing");
         planet.classList.add("viewing");
+
+        if (mobile_view.matches) {
+            downArrow.style.display = "block";
+        }
         hamburger.style.pointerEvents = "auto";
+        aboutLink.style.pointerEvents = "auto";
+        portfolioLink.style.pointerEvents = "auto";
+        contactLink.style.pointerEvents = "auto";
     }, 8300)
 })
 
@@ -740,13 +756,19 @@ const rocketFlame = document.querySelector(".flame");
 
 
 window.addEventListener('load', () => {
+    let mobile_view = window.matchMedia("(max-width: 771px)");
+
+    if (mobile_view.matches) {
+        const bottomPx = titleButton.getBoundingClientRect().bottom;
+        downArrow.style.top = `${bottomPx}px`;
+    }
+
     hamburger.style.pointerEvents = "none"
     title.classList.add('pop')
     title.classList.add('viewing');
     titleButton.classList.add("pop");
     planet.classList.add('viewing');
     const topPx = titleButton.getBoundingClientRect().top - 220;
-
 
 
 
@@ -760,6 +782,11 @@ window.addEventListener('load', () => {
     setTimeout(() => {
         next1.style.display = "block"
         next1.classList.add("viewing");
+        if (mobile_view.matches) {
+            downArrow.style.display = "block";
+        } else {
+            downArrow.style.display = "none";
+        }
         hamburger.style.pointerEvents = "auto";
         aboutLink.style.pointerEvents = "auto";
         portfolioLink.style.pointerEvents = "auto";

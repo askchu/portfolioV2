@@ -284,6 +284,9 @@ nav a {
   height: 100%;
   background: black;
 }
+.down{
+  display: none;
+}
 .flame1{
   opacity: 0;
   position: absolute;
@@ -1691,7 +1694,39 @@ select:-webkit-autofill:focus {
   .details .img {
     max-width: 100px;
     max-height: 100px;
-}
+  }
+  .down {
+    /* display: block; */
+    position: absolute;
+	  text-align: center;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50px;
+    /* width: 150px; */
+    width: 100%;
+    padding: 15px 0;
+    animation: bounce 2s infinite;
+  }
+
+  .fa {
+	  color: #fff;
+  }
+  .fa-3x{
+    font-size: 2em;
+  }
+
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-30px);
+    }
+    60% {
+      transform: translateY(-15px);
+    }
+  }
 }
 
 @media (max-width: 1250px){
