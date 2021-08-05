@@ -71,12 +71,12 @@ const generateObjects = (number, star) => {
         }
         else {
             star.style.animation = `shimmer ${random2}s linear`
-            star.style.animationIterationCount = "3";
+            star.style.animationIterationCount = "10";
             stars.appendChild(copy);
         }
     }
 }
-generateObjects(900, smallStar);
+generateObjects(300, smallStar);
 
 const allofNext = document.querySelectorAll(".next");
 
@@ -182,6 +182,8 @@ next1.addEventListener('click', () => {
     }, 950)
 
     setTimeout(() => {
+
+
         content1.classList.add("viewing");
         content1.style.opacity = "1";
         hamburger.style.pointerEvents = "auto";
@@ -214,18 +216,22 @@ next2.addEventListener('click', () => {
         portfolio.style.display = "grid";
     }, 1000)
     setTimeout(() => {
-
         details.classList.add("viewing");
         content1.classList.remove("viewing");
         portfolio.classList.add("viewing");
     }, 2300)
 
     setTimeout(() => {
+
+
+    }, 2800)
+
+    setTimeout(() => {
         portfolio.style.opacity = "1";
         next3.style.display = "block";
         next3.classList.add("viewing");
         hamburger.style.pointerEvents = "auto";
-    }, 2700)
+    }, 2900)
 
 })
 
@@ -602,6 +608,7 @@ const formFG1 = document.querySelector('.fg1');
 const sticker = document.querySelector('.sticker')
 
 form.addEventListener('submit', (e) => {
+
     e.preventDefault();
     hamburger.style.pointerEvents = "none";
     contactForm.classList.remove("open");
@@ -675,6 +682,9 @@ form.addEventListener('submit', (e) => {
         titleButton.style.animationDelay = "1s";
         titleButton.classList.add('pop');
         title.classList.add("viewing");
+
+
+
         formFG1.style.display = "none";
         formFG.style.display = "none";
         sticker.style.display = "none";
@@ -726,6 +736,9 @@ downloadResume.addEventListener('click', () => {
 const rocket = document.querySelector(".rocketCon");
 const rocketFlame = document.querySelector(".flame");
 
+
+
+
 window.addEventListener('load', () => {
     hamburger.style.pointerEvents = "none"
     title.classList.add('pop')
@@ -733,6 +746,10 @@ window.addEventListener('load', () => {
     titleButton.classList.add("pop");
     planet.classList.add('viewing');
     const topPx = titleButton.getBoundingClientRect().top - 220;
+
+
+
+
     planet.style.top = `${topPx}px`
 
 
@@ -859,6 +876,8 @@ aboutLink.addEventListener("click", () => {
     }
     if (title.classList.contains("viewing") == true) {
         content1.scroll(0, 0);
+
+
         planet.classList.remove("viewing");
         planet.classList.add("next");
         wrap1.style.opacity = "0";
@@ -893,6 +912,8 @@ aboutLink.addEventListener("click", () => {
     }
     if (content1.classList.contains("viewing") == true) {
         content1.scroll(0, 0);
+
+
         next2.classList.remove("viewing");
 
         hamburger.classList.remove('open');
@@ -1014,6 +1035,8 @@ aboutLink.addEventListener("click", () => {
         contactForm.style.display = "none";
         contactMe.style.opacity = "0";
 
+
+
         hamburger.style.pointerEvents = "none";
         aboutLink.style.pointerEvents = "none";
         portfolioLink.style.pointerEvents = "none";
@@ -1095,6 +1118,11 @@ portfolioLink.addEventListener("click", () => {
         }, 950)
 
         setTimeout(() => {
+
+
+        }, 2500)
+
+        setTimeout(() => {
             details.classList.add("viewing");
             portfolio.classList.add("viewing");
             portfolio.style.opacity = "1";
@@ -1106,7 +1134,7 @@ portfolioLink.addEventListener("click", () => {
             portfolioLink.style.pointerEvents = "auto";
             contactLink.style.pointerEvents = "auto";
 
-        }, 2300)
+        }, 2700)
     }
     if (content1.classList.contains("viewing") == true) {
         content1.style.display = "none";
@@ -1132,8 +1160,8 @@ portfolioLink.addEventListener("click", () => {
             content1.classList.remove("viewing");
             details.classList.remove("hide");
             details.style.animation = "squareToBall 2.3s ease-in-out forwards";
-            // content1.style.display = "none";
         }, 200)
+
         setTimeout(() => {
             wrap1.style.opacity = "1";
             wrap2.style.opacity = "0";
@@ -1141,20 +1169,26 @@ portfolioLink.addEventListener("click", () => {
             details.style.animation = "ballToSquare 1.5s 0.5s forwards";
             portfolio.style.display = "grid";
         }, 1000)
+
         setTimeout(() => {
             details.classList.add("viewing");
             portfolio.classList.add("viewing");
         }, 2300)
+        setTimeout(() => {
+
+
+        }, 2500)
 
         setTimeout(() => {
             portfolio.style.opacity = "1";
             next3.style.display = "block";
 
-            hamburger.style.pointerEvents = "auto"; next3.classList.add("viewing");
+            hamburger.style.pointerEvents = "auto";
+            next3.classList.add("viewing");
             aboutLink.style.pointerEvents = "auto";
             portfolioLink.style.pointerEvents = "auto";
             contactLink.style.pointerEvents = "auto";
-        }, 2700)
+        }, 3000)
 
 
     }
@@ -1202,6 +1236,11 @@ portfolioLink.addEventListener("click", () => {
                 project.style.display = "flex"
             }
         }, 1000)
+
+        setTimeout(() => {
+
+
+        }, 2000)
         setTimeout(() => {
             form.reset();
             details.classList.add("viewing");
@@ -1339,8 +1378,8 @@ contactLink.addEventListener("click", () => {
 
         }, 2300)
 
-        setT
-        hamburger.style.pointerEvents = "auto"; imeout(() => {
+        setTimeout(() => {
+            hamburger.style.pointerEvents = "auto";
             aboutLink.style.pointerEvents = "auto";
             portfolioLink.style.pointerEvents = "auto";
             contactLink.style.pointerEvents = "auto";
