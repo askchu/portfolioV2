@@ -530,6 +530,8 @@ nextProject4.addEventListener('click', () => {
         envelopeBG.style.width = "0";
     }
 
+
+
     details.style.border = "3px solid #397BF9"
     next3.classList.remove("viewing");
 
@@ -577,6 +579,9 @@ nextProject4.addEventListener('click', () => {
         contactMe.classList.add("viewing");
         contactForm.classList.add("viewing");
         contactForm.style.border = "none";
+        if (mobile_view.matches) {
+            contactForm.style.transform = "translateY(-10px)"
+        }
         contactForm.style.backgroundColor = "transparent";
         contactForm.style.boxShadow = "none";
         contactForm.style.pointerEvents = "auto";
