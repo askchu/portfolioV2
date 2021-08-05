@@ -718,7 +718,7 @@ select:-webkit-autofill:focus {
   position: absolute;
   display: flex;
   justify-content: center;
-  top: 90%;
+  bottom: 8%;
   width: 70%;
   max-width: 400px;
   height: 30px;
@@ -1754,17 +1754,35 @@ select:-webkit-autofill:focus {
 
 footer{
   position: absolute;
-  top: 96%;
-  right: 0;
+  bottom: 0.5%;
+  left: 0;
   z-index: 6000;
   color: white;
-  margin-right: 20px;
-  font-size: 0.8rem;
+  margin: 0 5px;
+  font-size: 0.7rem;
+}
+
+footer a{
+  text-decoration: none;
+  color: white;
+}
+
+footer a:hover{
+  cursor: auto; 
+  /* or pointer */
 }
 
 
 
+
 /* NOTE: MediaQuery for 770px */
+
+
+@media (max-width: 480px){
+  .instructions{
+    bottom: 10%;
+  }
+}
 
 @media (max-width: 770px){
    .rocketCon {
@@ -1784,6 +1802,7 @@ footer{
     margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
+    bottom: 20%;
     height: 50px;
     width: 100%;
     padding: 15px 0;
@@ -1793,7 +1812,9 @@ footer{
   .fa {
 	  color: #fff;
   }
-  
+  footer{
+    text-align: center;
+  }
 
 
   @keyframes bounce {

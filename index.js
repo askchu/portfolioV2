@@ -790,14 +790,15 @@ const rocket = document.querySelector(".rocketCon");
 const rocketFlame = document.querySelector(".flame");
 
 
-
+const body = document.querySelector("body");
+const footer = document.querySelector("footer");
 
 window.addEventListener('load', () => {
-    let mobile_view = window.matchMedia("(max-width: 771px)");
 
-    if (mobile_view.matches) {
-        downArrow.style.top = `65%`;
-    }
+    // const bodyHeight = body.getBoundingClientRect().bottom;
+    // footer.style.top = `calc(${bodyHeight}px - 8vh)`;
+
+    let mobile_view = window.matchMedia("(max-width: 771px)");
 
     hamburger.style.pointerEvents = "none"
     title.classList.add('pop')
