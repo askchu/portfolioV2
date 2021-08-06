@@ -145,7 +145,7 @@ titleButton.addEventListener('click', () => {
         contactMe.style.opacity = "1";
         contactForm.classList.add("viewing");
         if (mobile_view.matches) {
-            contactForm.style.transform = "translateY(-10px)"
+            contactForm.style.transform = "translateY(-19px)"
         }
         contactForm.style.border = "none";
         contactForm.style.backgroundColor = "transparent";
@@ -598,7 +598,7 @@ nextProject4.addEventListener('click', () => {
         contactForm.classList.add("viewing");
         contactForm.style.border = "none";
         if (mobile_view.matches) {
-            contactForm.style.transform = "translateY(-10px)"
+            contactForm.style.transform = "translateY(-19px)"
         }
         contactForm.style.backgroundColor = "transparent";
         contactForm.style.boxShadow = "none";
@@ -1584,7 +1584,7 @@ contactLink.addEventListener("click", () => {
             contactMe.style.opacity = "1";
             contactForm.classList.add("viewing");
             if (mobile_view.matches) {
-                contactForm.style.transform = "translateY(-10px)"
+                contactForm.style.transform = "translateY(-19px)"
             }
             contactForm.style.border = "none";
             contactForm.style.backgroundColor = "transparent";
@@ -1632,7 +1632,7 @@ contactLink.addEventListener("click", () => {
             details.style.animation = "ballToSquare 1.5s 0.5s forwards";
             contactMe.style.display = "block";
             if (mobile_view.matches) {
-                contactForm.style.transform = "translateY(-10px)"
+                contactForm.style.transform = "translateY(-19px)"
             }
             contactForm.style.display = "block";
             contactForm.style.opacity = "0";
@@ -1691,7 +1691,7 @@ contactLink.addEventListener("click", () => {
             details.style.border = "3px solid  #F4B400"
             details.style.animation = "ballToSquare 1.5s 0.5s forwards";
             if (mobile_view.matches) {
-                contactForm.style.transform = "translateY(-10px)"
+                contactForm.style.transform = "translateY(-19px)"
             }
             contactMe.style.display = "block";
             contactForm.style.display = "block";
