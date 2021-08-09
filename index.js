@@ -110,6 +110,8 @@ titleButton.addEventListener('click', () => {
         envelopeBG.style.width = "0";
     }
 
+    next1.style.display = "none";
+
     details.style.border = "3px solid #F4B400"
     planet.classList.remove("viewing");
     planet.classList.add("next");
@@ -121,12 +123,6 @@ titleButton.addEventListener('click', () => {
     next1.style.display = "none";
     next1.classList.remove("viewing");
     next1.classList.remove("hide");
-
-    if (mobile_view.matches) {
-        contactForm.style.transform = "scale(0.9)";
-    } else {
-        contactForm.style.transform = "scale(1.1)";
-    }
 
 
     aboutLink.style.pointerEvents = "none";
@@ -144,9 +140,7 @@ titleButton.addEventListener('click', () => {
         contactMe.classList.add("viewing");
         contactMe.style.opacity = "1";
         contactForm.classList.add("viewing");
-        if (mobile_view.matches) {
-            contactForm.style.transform = "translateY(-19px)"
-        }
+
         contactForm.style.border = "none";
         contactForm.style.backgroundColor = "transparent";
         contactForm.style.boxShadow = "none";
@@ -298,13 +292,8 @@ next3.addEventListener('click', () => {
         details.style.animation = "ballToSquare 1.5s 0.5s forwards";
         contactMe.style.display = "block";
 
-        if (mobile_view.matches) {
-            contactForm.style.transform = "scale(0.9)";
-        } else {
-            contactForm.style.transform = "scale(1.1)";
-        }
+
         contactForm.style.opacity = "0";
-        contactForm.style.display = "block";
     }, 1000)
     setTimeout(() => {
         next3.classList.remove("viewing");
@@ -314,11 +303,13 @@ next3.addEventListener('click', () => {
         contactForm.style.backgroundColor = "transparent";
         contactForm.style.boxShadow = "none";
         contactForm.style.pointerEvents = "auto";
+        contactForm.style.display = "flex";
     }, 2300)
 
     setTimeout(() => {
-        contactForm.classList.add("open");
+        contactMe.style.opacity = "1";
         contactForm.style.opacity = "1";
+        contactForm.classList.add("open");
         hamburger.style.pointerEvents = "auto";
     }, 2700)
 
@@ -575,20 +566,16 @@ nextProject4.addEventListener('click', () => {
     }, 200)
     setTimeout(() => {
         projectTitle.innerHTML = "Projects";
-        portfolio.style.display = "grid";
+        portfolio.style.display = "none";
         for (let project of projects) {
-            project.style.display = "flex"
+            project.style.display = "none"
         }
         wrap2.style.opacity = "1";
         wrap3.style.opacity = "0";
         details.style.border = "3px solid #F4B400"
         details.style.animation = "ballToSquare 1.5s 0.5s forwards";
         contactMe.style.display = "block";
-        if (mobile_view.matches) {
-            contactForm.style.transform = "scale(0.9)";
-        } else {
-            contactForm.style.transform = "scale(1.1)";
-        }
+
 
     }, 1000)
     setTimeout(() => {
@@ -597,9 +584,6 @@ nextProject4.addEventListener('click', () => {
         contactMe.classList.add("viewing");
         contactForm.classList.add("viewing");
         contactForm.style.border = "none";
-        if (mobile_view.matches) {
-            contactForm.style.transform = "translateY(-19px)"
-        }
         contactForm.style.backgroundColor = "transparent";
         contactForm.style.boxShadow = "none";
         contactForm.style.pointerEvents = "auto";
@@ -607,8 +591,9 @@ nextProject4.addEventListener('click', () => {
 
     setTimeout(() => {
         contactForm.classList.add("open");
-        contactForm.style.display = "block";
+        contactForm.style.display = "flex";
         contactForm.classList.remove("hide");
+        contactMe.style.opacity = "1";
         // contactForm.style.zIndex = "7000";
         contactForm.style.opacity = "1";
     }, 2900)
@@ -654,8 +639,9 @@ form.addEventListener('submit', (e) => {
     contactLink.style.pointerEvents = "none";
     contactForm.classList.remove("open");
     details.classList.remove("viewing");
-    details.style.display = "none";
-
+    contactMe.classList.remove("viewing");
+    details.style.border = "none";
+    contactMe.style.overflow = "visible";
 
     setTimeout(() => {
         wrap3.style.opacity = "1";
@@ -700,7 +686,8 @@ form.addEventListener('submit', (e) => {
             envelopeBG.style.width = "450px";
             // envelopeBG.style.width = "0";
         }
-
+        contactMe.style.display = "none";
+        contactMe.style.opacity = "0";
     }, 4000)
     setTimeout(() => {
         title.classList.remove("fade");
@@ -714,6 +701,7 @@ form.addEventListener('submit', (e) => {
         planet.style.top = `${topPx}px`;
         planet.style.transform = "scale(0.6)";
         titleButton.style.opacity = "0";
+        contactForm.classList.remove("viewing");
     }, 6000)
 
     setTimeout(() => {
@@ -735,7 +723,10 @@ form.addEventListener('submit', (e) => {
 
     setTimeout(() => {
         planet.classList.add("viewing");
-
+        details.style.animation = "none";
+        contactForm.style.opacity = "0";
+        contactMe.style.overflow = "auto";
+        contactForm.style.pointerEvents = "none";
         if (mobile_view.matches) {
             downArrow.style.display = "block";
             downArrow.classList.add("viewing");
@@ -743,6 +734,9 @@ form.addEventListener('submit', (e) => {
     }, 8300)
 
     setTimeout(() => {
+        contactMe.style.display = "none"
+        contactMe.style.opacity = "0"
+        contactForm.style.animation = "none";
         next1.style.display = "block";
         next1.classList.add("viewing");
 
@@ -831,6 +825,7 @@ window.addEventListener('load', () => {
         aboutLink.style.pointerEvents = "auto";
         portfolioLink.style.pointerEvents = "auto";
         contactLink.style.pointerEvents = "auto";
+        titleButton.style.pointerEvents = "auto";
         next1.style.display = "block"
         next1.classList.add("viewing");
     }, 6600);
@@ -1194,11 +1189,6 @@ portfolioLink.addEventListener("click", () => {
         }, 950)
 
         setTimeout(() => {
-
-
-        }, 2500)
-
-        setTimeout(() => {
             details.classList.add("viewing");
             portfolio.classList.add("viewing");
             portfolio.style.opacity = "1";
@@ -1210,7 +1200,7 @@ portfolioLink.addEventListener("click", () => {
             portfolioLink.style.pointerEvents = "auto";
             contactLink.style.pointerEvents = "auto";
 
-        }, 2700)
+        }, 2400)
     }
     if (content1.classList.contains("viewing") == true) {
         content1.style.display = "none";
@@ -1565,11 +1555,7 @@ contactLink.addEventListener("click", () => {
         portfolioLink.style.pointerEvents = "none";
         contactLink.style.pointerEvents = "none";
 
-        if (mobile_view.matches) {
-            contactForm.style.transform = "scale(0.9)";
-        } else {
-            contactForm.style.transform = "scale(1.1)";
-        }
+
 
         setTimeout(() => {
             details.style.display = "block";
@@ -1583,9 +1569,7 @@ contactLink.addEventListener("click", () => {
             contactMe.classList.add("viewing");
             contactMe.style.opacity = "1";
             contactForm.classList.add("viewing");
-            if (mobile_view.matches) {
-                contactForm.style.transform = "translateY(-19px)"
-            }
+
             contactForm.style.border = "none";
             contactForm.style.backgroundColor = "transparent";
             contactForm.style.boxShadow = "none";
@@ -1594,7 +1578,8 @@ contactLink.addEventListener("click", () => {
         }, 2300)
         setTimeout(() => {
 
-            hamburger.style.pointerEvents = "auto"; contactForm.classList.add("open");
+            hamburger.style.pointerEvents = "auto";
+            contactForm.classList.add("open");
             aboutLink.style.pointerEvents = "auto";
             portfolioLink.style.pointerEvents = "auto";
             contactLink.style.pointerEvents = "auto";
@@ -1608,11 +1593,7 @@ contactLink.addEventListener("click", () => {
         next2.classList.remove("hide");
 
         content1.style.opacity = "0";
-        if (mobile_view.matches) {
-            contactForm.style.transform = "scale(0.9)";
-        } else {
-            contactForm.style.transform = "scale(1.1)";
-        }
+
 
         hamburger.style.pointerEvents = "none";
         aboutLink.style.pointerEvents = "none";
@@ -1631,10 +1612,8 @@ contactLink.addEventListener("click", () => {
             details.style.border = "3px solid  #F4B400"
             details.style.animation = "ballToSquare 1.5s 0.5s forwards";
             contactMe.style.display = "block";
-            if (mobile_view.matches) {
-                contactForm.style.transform = "translateY(-19px)"
-            }
-            contactForm.style.display = "block";
+
+            contactForm.style.display = "flex";
             contactForm.style.opacity = "0";
         }, 1000)
         setTimeout(() => {
@@ -1665,11 +1644,7 @@ contactLink.addEventListener("click", () => {
         portfolio.style.opacity = "0";
 
 
-        if (mobile_view.matches) {
-            contactForm.style.transform = "scale(0.9)";
-        } else {
-            contactForm.style.transform = "scale(1.1)";
-        }
+
 
         next3.style.display = "none";
         next3.classList.remove("viewing");
@@ -1690,11 +1665,9 @@ contactLink.addEventListener("click", () => {
             wrap3.style.opacity = "0";
             details.style.border = "3px solid  #F4B400"
             details.style.animation = "ballToSquare 1.5s 0.5s forwards";
-            if (mobile_view.matches) {
-                contactForm.style.transform = "translateY(-19px)"
-            }
+
             contactMe.style.display = "block";
-            contactForm.style.display = "block";
+            contactForm.style.display = "flex";
             contactForm.style.opacity = "0";
         }, 1000)
         setTimeout(() => {
